@@ -1,0 +1,2388 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>HL10524 Research Methods | Course Textbook</title>
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i&amp;subset=latin-ext" rel="stylesheet"/>
+<style>
+/* =========================================================
+       UNIVERSITY OF BATH-INSPIRED COLOUR PALETTE
+       ========================================================= */
+
+    :root {
+      --granite: #202329;
+      --granite-light: #f2f2f2;
+
+      --bath-blue: #004489;
+      --bath-blue-hover: #00366d;
+      --bath-blue-pale: #e2eef8;
+
+      --steel-light: #f5f7f8;
+
+      --mint: #d8eee7;
+      --mint-dark: #006f62;
+
+      --cornflower: #e8eff8;
+
+      --text: #202329;
+      --secondary-text: #4b4d50;
+
+      --border: #d5d7d8;
+
+      --white: #ffffff;
+
+      --warning: #fff3cd;
+      --warning-border: #d39e00;
+    }
+
+
+    /* =========================================================
+       BASE
+       ========================================================= */
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+
+      background: var(--white);
+      color: var(--text);
+
+      font-family: "Noto Sans", Arial, sans-serif;
+      font-size: 17px;
+      line-height: 1.65;
+    }
+
+    a {
+      color: var(--bath-blue);
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    a:hover {
+      color: var(--bath-blue-hover);
+      text-decoration-thickness: 2px;
+    }
+
+    a:focus-visible {
+      outline: 3px solid #ffbf47;
+      outline-offset: 3px;
+    }
+
+
+    /* =========================================================
+       TOP BAR
+       ========================================================= */
+
+    .top-bar {
+      background: var(--granite);
+      color: var(--white);
+    }
+
+    .top-bar-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 20px 30px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 30px;
+    }
+
+    .university-name {
+      margin: 0;
+
+      color: var(--white);
+
+      font-size: 1.35rem;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    .unit-name {
+      margin: 0;
+
+      color: var(--white);
+
+      font-size: 0.9rem;
+      font-weight: 700;
+    }
+
+
+    /* =========================================================
+       PAGE HEADING
+       ========================================================= */
+
+    .page-heading-section {
+      background: var(--white);
+    }
+
+    .page-heading-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 52px 30px 50px;
+    }
+
+    .page-heading {
+      max-width: 950px;
+
+      margin: 0 0 18px;
+
+      color: var(--text);
+
+      font-size: clamp(2.4rem, 5vw, 3.65rem);
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: -0.035em;
+    }
+
+    .page-subheading {
+      max-width: 900px;
+
+      margin: 0;
+
+      color: var(--secondary-text);
+
+      font-size: clamp(1.15rem, 2vw, 1.45rem);
+      font-weight: 400;
+      line-height: 1.45;
+    }
+
+
+    /* =========================================================
+       MAIN NARRATIVE AREA
+       ========================================================= */
+
+    .narrative-section {
+      background: var(--steel-light);
+      border-top: 1px solid #eeeeee;
+    }
+
+    .narrative-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 48px 30px 80px;
+
+      display: grid;
+
+      grid-template-columns:
+        minmax(210px, 270px)
+        minmax(0, 760px);
+
+      gap: 70px;
+      align-items: start;
+    }
+
+
+/* =========================================================
+   Contents — UNIVERSITY OF BATH STYLE
+   ========================================================= */
+
+.sidebar {
+  position: sticky;
+  top: 25px;
+}
+/* Home button */
+.course-home-button {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  margin: 0 0 16px;
+  padding: 12px 16px;
+
+  background: #004489;
+  color: #ffffff;
+  border-radius: 6px;
+
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1.4;
+
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.course-home-button:hover,
+.course-home-button:focus {
+  background: #1a5a98;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.course-home-button span {
+  font-size: 1.1rem;
+  line-height: 1;
+}
+.in-page-nav {
+  margin: 0;
+  padding: 0;
+  background: var(--bath-blue-pale);
+  color: #202329;
+}
+
+.in-page-nav-title {
+  margin: 0;
+  padding: 20px 20px 16px;
+}
+
+.in-page-nav-title h2 {
+  margin: 0;
+  padding: 0;
+  color: #202329;
+  font-family: "Noto Sans", Arial, sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.in-page-nav ul {
+  margin: 0;
+  padding: 0 0 10px;
+  list-style: none;
+}
+
+.in-page-nav li {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.in-page-nav a {
+  display: block;
+  padding: 8px 20px;
+  color: #004489;
+  font-family: "Noto Sans", Arial, sans-serif;
+  font-size: 0.95rem;
+  font-weight: 400;
+  line-height: 1.45;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
+.in-page-nav a:hover,
+.in-page-nav a:focus {
+  color: #00366d;
+  text-decoration-thickness: 2px;
+  background: transparent;
+}
+
+
+    /* =========================================================
+       MAIN CONTENT
+       ========================================================= */
+
+    .content {
+      min-width: 0;
+    }
+
+    .content-section {
+      margin-bottom: 55px;
+    }
+
+    .content-section:last-child {
+      margin-bottom: 0;
+    }
+
+    .content h2 {
+      margin: 0 0 20px;
+
+      color: var(--text);
+
+      font-size: 2rem;
+      font-weight: 700;
+      line-height: 1.25;
+      letter-spacing: -0.025em;
+    }
+
+    .content h3 {
+      margin: 32px 0 12px;
+
+      color: var(--text);
+
+      font-size: 1.3rem;
+      font-weight: 700;
+      line-height: 1.35;
+    }
+
+    .content p {
+      margin: 0 0 18px;
+    }
+
+    .content ul,
+    .content ol {
+      margin: 18px 0 24px;
+      padding-left: 28px;
+    }
+
+    .content li {
+      margin-bottom: 9px;
+      padding-left: 4px;
+    }
+
+    .section-divider {
+      margin: 52px 0;
+
+      border: 0;
+      border-top: 1px solid var(--border);
+    }
+
+
+    /* =========================================================
+       BATH-STYLE INFORMATION PANEL
+       ========================================================= */
+
+    .panel {
+      margin: 28px 0;
+      padding: 24px 26px;
+
+      background: var(--mint);
+    }
+
+    .panel h3 {
+      margin: 0 0 8px;
+
+      font-size: 1.25rem;
+    }
+
+    .panel p:last-child,
+    .panel ul:last-child {
+      margin-bottom: 0;
+    }
+
+    .panel-blue {
+      background: var(--bath-blue-pale);
+    }
+
+    .panel-warning {
+      background: var(--warning);
+      border-left: 6px solid var(--warning-border);
+    }
+
+
+    /* =========================================================
+       STORAGE SECTION
+       ========================================================= */
+
+    .storage-options {
+      margin: 30px 0;
+    }
+
+    .storage-option {
+      padding: 26px 0;
+
+      border-top: 1px solid var(--border);
+    }
+
+    .storage-option:last-child {
+      border-bottom: 1px solid var(--border);
+    }
+
+    .storage-label {
+      display: block;
+
+      margin-bottom: 6px;
+
+      color: var(--bath-blue);
+
+      font-size: 0.85rem;
+      font-weight: 700;
+      line-height: 1.4;
+
+      text-transform: uppercase;
+      letter-spacing: 0.035em;
+    }
+
+    .storage-option h3 {
+      margin: 0 0 10px;
+
+      font-size: 1.5rem;
+    }
+
+    .storage-option p:last-child {
+      margin-bottom: 0;
+    }
+
+
+    /* =========================================================
+       NUMBERED INSTRUCTIONS
+       ========================================================= */
+
+    .steps {
+      margin: 30px 0;
+      counter-reset: bath-step;
+    }
+
+    .step {
+      position: relative;
+
+      min-height: 55px;
+
+      margin-bottom: 28px;
+      padding-left: 70px;
+
+      counter-increment: bath-step;
+    }
+
+    .step::before {
+      content: counter(bath-step);
+
+      position: absolute;
+      top: 1px;
+      left: 0;
+
+      width: 46px;
+      height: 46px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      background: var(--granite);
+      color: var(--white);
+
+      font-size: 1.1rem;
+      font-weight: 700;
+    }
+
+    .step h3 {
+      margin: 0 0 4px;
+
+      font-size: 1.12rem;
+    }
+
+    .step p {
+      margin: 0;
+    }
+
+
+    /* =========================================================
+       FEATURE SECTION
+       ========================================================= */
+
+    .feature-section {
+      margin: 55px -30px;
+      padding: 38px 30px;
+
+      background: var(--cornflower);
+    }
+
+    .feature-section h2 {
+      margin-top: 0;
+    }
+
+
+    /* =========================================================
+       FINAL CHECKLIST
+       ========================================================= */
+
+    .checklist-section {
+      margin-top: 60px;
+      padding: 34px;
+
+      background: var(--granite);
+      color: var(--white);
+    }
+
+    .checklist-section h2 {
+      margin: 0 0 20px;
+
+      color: var(--white);
+    }
+
+    .checklist-section ul {
+      margin-bottom: 0;
+    }
+
+    .checklist-section li {
+      margin-bottom: 12px;
+    }
+
+    .checklist-section strong {
+      color: var(--white);
+    }
+
+
+    /* =========================================================
+       SMALL FOOTER
+       ========================================================= */
+
+    .workbook-footer {
+      background: var(--white);
+      border-top: 1px solid var(--border);
+    }
+
+    .workbook-footer-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 30px;
+
+      color: var(--secondary-text);
+
+      font-size: 0.9rem;
+    }
+
+    .workbook-footer-inner p {
+      margin: 0;
+    }
+
+
+    /* =========================================================
+       RESPONSIVE
+       ========================================================= */
+
+    @media (max-width: 850px) {
+
+      .narrative-inner {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
+      .sidebar {
+        position: static;
+      }
+
+      .in-page-nav {
+        max-width: none;
+      }
+
+    }
+
+
+    @media (max-width: 600px) {
+
+      body {
+        font-size: 16px;
+      }
+
+      .top-bar-inner {
+        display: block;
+        padding: 18px 20px;
+      }
+
+      .unit-name {
+        margin-top: 6px;
+      }
+
+      .page-heading-inner {
+        padding: 38px 20px 36px;
+      }
+
+      .narrative-inner {
+        padding: 30px 20px 55px;
+      }
+
+      .page-heading {
+        font-size: 2.25rem;
+      }
+
+      .content h2 {
+        font-size: 1.7rem;
+      }
+
+      .feature-section {
+        margin-left: -20px;
+        margin-right: -20px;
+
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+      .step {
+        padding-left: 58px;
+      }
+
+      .step::before {
+        width: 40px;
+        height: 40px;
+      }
+
+      .checklist-section {
+        padding: 25px;
+      }
+
+    }
+
+
+    /* =========================================================
+       PRINT
+       ========================================================= */
+
+    @media print {
+
+      .sidebar {
+        display: none;
+      }
+
+      .narrative-inner {
+        display: block;
+      }
+
+      body {
+        font-size: 12pt;
+      }
+
+    }
+
+
+/* =========================================================
+   SINGLE-FILE COURSE WORKBOOK
+   ========================================================= */
+
+.app-page {
+  display: none;
+}
+
+.app-page.active {
+  display: block;
+}
+
+.course-home {
+  background: var(--white);
+}
+
+.course-home-inner {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 52px 30px 75px;
+}
+
+.course-home-intro {
+  max-width: 900px;
+  margin-bottom: 52px;
+}
+
+.course-home-intro h1 {
+  max-width: 950px;
+  margin: 0 0 18px;
+  color: var(--text);
+  font-size: clamp(2.4rem, 5vw, 3.65rem);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.035em;
+}
+
+.course-home-intro p {
+  max-width: 850px;
+  margin: 0;
+  color: var(--secondary-text);
+  font-size: clamp(1.15rem, 2vw, 1.45rem);
+  line-height: 1.45;
+}
+
+.course-topics {
+  max-width: 900px;
+}
+
+.course-topics h2 {
+  margin: 0 0 12px;
+  color: var(--text);
+  font-size: 2rem;
+  line-height: 1.25;
+  letter-spacing: -0.025em;
+}
+
+.course-topics-intro {
+  margin: 0 0 28px;
+  color: var(--secondary-text);
+}
+
+.topic-list {
+  border-top: 1px solid var(--border);
+}
+
+.topic-item {
+  display: grid;
+  grid-template-columns: 58px minmax(0, 1fr) 34px;
+  gap: 22px;
+  align-items: center;
+  padding: 25px 6px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+  text-decoration: none;
+  transition: background-color 0.15s ease;
+}
+
+.topic-item:hover {
+  background: var(--bath-blue-pale);
+  color: var(--text);
+  text-decoration: none;
+}
+
+.topic-number {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--bath-blue);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1;
+  margin-left: 6px;
+  flex-shrink: 0;
+}
+
+.topic-text h3 {
+  margin: 0 0 5px;
+  color: var(--text);
+  font-size: 1.35rem;
+  line-height: 1.3;
+}
+
+.topic-text p {
+  margin: 0;
+  color: var(--secondary-text);
+  font-size: 0.98rem;
+  line-height: 1.5;
+}
+
+.topic-arrow {
+  color: #202329;
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-align: right;
+  transform: translateX(-12px);
+}
+
+.page-navigation {
+  margin-top: 60px;
+  padding-top: 25px;
+  border-top: 1px solid var(--border);
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 20px;
+  align-items: center;
+}
+
+.page-navigation a {
+  font-weight: 700;
+}
+
+.page-navigation .nav-home {
+  text-align: center;
+}
+
+.page-navigation .nav-next {
+  text-align: right;
+}
+
+.placeholder-panel {
+  margin: 28px 0;
+  padding: 28px;
+  background: var(--cornflower);
+}
+
+.placeholder-panel h3 {
+  margin-top: 0;
+}
+
+.back-home {
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+
+@media (max-width: 600px) {
+  .course-home-inner {
+    padding: 38px 20px 55px;
+  }
+
+  .topic-item {
+    grid-template-columns: 70px minmax(0, 1fr) 24px;
+    gap: 12px;
+    padding: 20px 0;
+  }
+
+  .topic-text h3 {
+    font-size: 1.18rem;
+  }
+
+  .page-navigation {
+    grid-template-columns: 1fr;
+  }
+
+  .page-navigation .nav-home,
+  .page-navigation .nav-next {
+    text-align: left;
+  }
+}
+
+
+    /* Inline R code referenced in teaching text */
+    .narrative-section .content-section p code,
+    .narrative-section .content-section li code {
+      display: inline-block;
+      padding: 0.08em 0.34em;
+      border: 1px solid #d8dce1;
+      border-radius: 4px;
+      background: #f1f2f4;
+      color: #303840;
+      font-family: Consolas, "SFMono-Regular", "Liberation Mono", "Courier New", monospace;
+      font-size: 0.92em;
+      font-weight: 400;
+      line-height: 1.35;
+      vertical-align: baseline;
+    }
+
+    /* Consistent, regular-weight monospace for all inline code and code blocks */
+    .narrative-section .content-section :is(p, li, blockquote, h3) code,
+    .narrative-section .content-section :is(p, li, blockquote, h3) strong code {
+      font-family: Consolas, "SFMono-Regular", "Liberation Mono", "Courier New", monospace;
+      font-weight: 400;
+    }
+    .code-example pre,
+    .code-example pre code,
+    .code-example pre code span {
+      font-family: Consolas, "SFMono-Regular", "Liberation Mono", "Courier New", monospace;
+      font-weight: 400;
+    }
+
+    /* =========================================================
+       QUARTO-STYLE COPYABLE R CODE BLOCKS
+       ========================================================= */
+
+    .code-with-filename {
+      margin: 24px 0;
+      border: 1px solid #d9dcdf;
+      border-radius: 7px;
+      overflow: hidden;
+      background: #f8f9fa;
+    }
+
+    .code-with-filename-file {
+      padding: 7px 14px;
+      background: #e9ecef;
+      border-bottom: 1px solid #d9dcdf;
+      color: #202329;
+      font-size: 0.86rem;
+      line-height: 1.4;
+    }
+
+    .code-with-filename-file strong { font-weight: 700; }
+
+    .code-example {
+      position: relative;
+      background: #f8f9fa;
+    }
+
+    .code-example pre {
+      margin: 0;
+      padding: 14px 54px 14px 0;
+      overflow-x: auto;
+      background: transparent;
+      color: #202329;
+      font-family: Consolas, "SFMono-Regular", "Liberation Mono", "Courier New", monospace;
+      font-size: 0.92rem;
+      line-height: 1.55;
+      white-space: pre;
+      counter-reset: code-line;
+    }
+
+    .code-example code { font: inherit; color: inherit; }
+    .code-line { display: block; counter-increment: code-line; }
+    .code-line::before {
+      content: counter(code-line);
+      display: inline-block;
+      width: 38px;
+      margin-right: 14px;
+      color: #8a8f94;
+      text-align: right;
+      user-select: none;
+    }
+    .r-fn { color: #006f62; }
+    .r-str { color: #9a3412; }
+    .r-arg { color: #6f42c1; }
+    .r-num { color: #005cc5; }
+
+    .copy-code-button {
+      position: absolute; top: 9px; right: 9px; width: 34px; height: 34px;
+      display: inline-flex; align-items: center; justify-content: center; padding: 0;
+      border: 1px solid transparent; border-radius: 5px; background: transparent;
+      color: #5c6268; cursor: pointer;
+      transition: background-color .15s ease, border-color .15s ease, color .15s ease;
+    }
+    .copy-code-button:hover { background:#fff; border-color:#c8ccd0; color:#202329; }
+    .copy-code-button:focus-visible { outline:3px solid #ffbf47; outline-offset:2px; }
+    .copy-code-button svg { width:17px; height:17px; fill:none; stroke:currentColor; stroke-width:1.8; stroke-linecap:round; stroke-linejoin:round; pointer-events:none; }
+    .copy-code-button::after {
+      content:attr(data-tooltip); position:absolute; right:0; bottom:calc(100% + 7px);
+      padding:5px 8px; border-radius:4px; background:#202329; color:#fff;
+      font-family:"Noto Sans",Arial,sans-serif; font-size:.76rem; font-weight:700; line-height:1.2; white-space:nowrap;
+      opacity:0; visibility:hidden; transform:translateY(3px); transition:opacity .12s ease, transform .12s ease, visibility .12s ease; pointer-events:none; z-index:2;
+    }
+    .copy-code-button:hover::after, .copy-code-button:focus-visible::after, .copy-code-button.copied::after { opacity:1; visibility:visible; transform:translateY(0); }
+
+  
+    /* Glossary table */
+    .glossary-table-wrap { overflow-x: auto; margin: 12px 0 8px; }
+    .glossary-table { width: 100%; border-collapse: collapse; font-family: inherit; font-size: inherit; line-height: inherit; }
+    .glossary-table th, .glossary-table td { font-family: inherit; font-size: inherit; line-height: inherit; }
+    .glossary-table th { text-align: left; background: #e2e7ec; color: #202329; font-weight: 700; }
+    .glossary-table th, .glossary-table td { padding: 8px 12px; border-bottom: 1px solid #dce2e8; vertical-align: top; }
+    .glossary-table td:first-child { font-weight: 600; white-space: nowrap; width: 27%; }
+    .glossary-table tbody tr:nth-child(even) { background: #fafbfd; }
+
+
+.in-page-nav a, .in-page-nav a * { font-style: normal !important; }
+
+/* Chapter 2 quiz: separate prompts from options and individual questions. */
+#check-understanding .knowledge-question-title { margin-bottom: 9px; }
+#check-understanding .knowledge-question-list > li.knowledge-question { margin-bottom: 16px !important; }
+#check-understanding .knowledge-question-list > li.knowledge-question:last-child { margin-bottom: 0 !important; padding-bottom: 0 !important; }
+#check-understanding .knowledge-panel { padding-bottom: 10px; }
+#check-understanding .knowledge-results { margin-top: 4px; }
+</style>
+<style>.mini-icon{display:inline-flex;align-items:center;justify-content:center;vertical-align:middle;margin-left:5px;padding:3px 7px;border-radius:6px;font-size:16px;background:#eaf3fb;color:#1673b8}.cloud-icon{color:#1475c9;font-size:23px;background:transparent;padding:0 4px}.folder-icon{background:#fff0c2}.pc-icon{background:#e9f1f8}.drive-icon{font-size:12px;font-weight:700;background:#e7edf5}.your-turn{background:#eaf7eb;border-left:4px solid #4a9d63;padding:17px 20px;margin:22px 0;border-radius:6px}.your-turn p{margin:8px 0 0}.workbook-note{background:#fff7d7;border-left:4px solid #d9a500;padding:15px 18px;margin:18px 0;border-radius:6px}</style><style>
+/* Chapter 1 knowledge check */
+.knowledge-panel {background:#f4efff;border-left:4px solid #9873d4;border-radius:7px;padding:18px 22px;margin:16px 0;}
+.knowledge-panel-heading {font-weight:700;margin:0 0 8px;}
+.knowledge-panel > p {margin-top:0;margin-bottom:12px;}
+.knowledge-question {padding:5px 0;margin:0;border-bottom:0;}
+.knowledge-question-list {list-style:decimal;padding-left:26px;margin:0;}
+.content .knowledge-question-list > li {padding-left:3px;margin-bottom:3px;}
+.knowledge-question-list > li::marker {font-weight:400;}
+.knowledge-question:last-of-type {border-bottom:0;}
+.knowledge-question-title {font-weight:400;margin:0 0 3px;line-height:1.4;}
+.knowledge-option {display:flex;align-items:flex-start;gap:9px;padding:2px 8px;margin-left:16px;border-radius:5px;cursor:pointer;line-height:1.35;}
+.knowledge-option:hover {background:#e9ddff;}
+.knowledge-option:has(input:checked) {background:#e3d5fa;}
+.knowledge-option input {margin-top:5px;accent-color:#7546b8;flex-shrink:0;}
+.knowledge-feedback {margin:3px 0 0;font-family:inherit;font-size:inherit;line-height:inherit;font-weight:400;}
+.knowledge-feedback:empty {display:none;}
+.knowledge-feedback.is-correct {color:#25633c;}
+.knowledge-feedback.is-incorrect {color:#8b3a36;}
+#knowledge-summary {font-family:inherit;font-size:inherit;line-height:inherit;font-weight:400;margin:0;}
+.knowledge-results {display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:2px;}
+.knowledge-question-list > li {margin-bottom:0 !important;padding-bottom:0 !important;}
+.knowledge-question-list .knowledge-feedback {margin-bottom:0 !important;}
+.knowledge-panel .knowledge-results > p {margin-top:0 !important;margin-bottom:0 !important;}
+.knowledge-reset {border:1px solid #9873d4;border-radius:5px;background:#fff;color:#603c95;padding:7px 13px;font-family:inherit;font-size:inherit;line-height:inherit;font-weight:400;cursor:pointer;}
+.knowledge-reset:hover {background:#e9ddff;}
+.knowledge-reset:focus-visible {outline:3px solid #7546b8;outline-offset:2px;}
+</style><style>
+/* Keep the bottom of the Chapter 1 example panels compact. */
+#intro-features .workbook-note > :last-child,
+#intro-features .your-turn > :last-child,
+#intro-features .your-turn ol,
+#intro-features .your-turn ol > li:last-child { margin-bottom: 0 !important; }
+#intro-features .knowledge-panel .knowledge-question-list,
+#intro-features .knowledge-panel .knowledge-question-list > li:last-child { margin-bottom: 0 !important; padding-bottom: 0 !important; }
+#intro-features .knowledge-panel .knowledge-feedback:empty { display: none !important; }
+#intro-features .knowledge-panel .knowledge-results:has(> p:empty) { display: none; }
+</style>
+<style>
+/* Match Chapter 2 quiz spacing in Sections 1.2 and 3.4. */
+#intro-features .knowledge-question-title, #install-check-understanding .knowledge-question-title { margin-bottom: 9px; }
+#intro-features .knowledge-question-list > li.knowledge-question, #install-check-understanding .knowledge-question-list > li.knowledge-question { margin-bottom: 16px !important; }
+#intro-features .knowledge-question-list > li.knowledge-question:last-child, #install-check-understanding .knowledge-question-list > li.knowledge-question:last-child { margin-bottom: 0 !important; padding-bottom: 0 !important; }
+#intro-features .knowledge-panel { padding-bottom: 18px; }
+#install-check-understanding .knowledge-panel { padding-bottom: 10px; }
+#intro-features .knowledge-results, #install-check-understanding .knowledge-results { margin-top: 4px; }
+</style>
+<style>
+/* Chapter-to-chapter buttons styled to match the sidebar Home button. */
+.chapter-bottom-navigation { display:flex; flex-wrap:wrap; justify-content:space-between; gap:12px; margin-top:38px; padding-top:22px; border-top:1px solid var(--border); }
+.chapter-nav-button { display:inline-flex; align-items:center; padding:12px 16px; background:#004489; color:#fff !important; border-radius:6px; font-size:.95rem; font-weight:700; line-height:1.4; text-decoration:none !important; transition:background-color .2s ease; max-width:100%; }
+.chapter-nav-button:hover, .chapter-nav-button:focus { background:#1a5a98; color:#fff !important; }
+.chapter-nav-button.next { margin-left:auto; text-align:right; }
+</style><style>
+/* Home page positioning: chapter circles 3mm right; Chapters 1–3 arrows 3mm left. */
+.topic-item .topic-number { transform: translateX(3mm); }
+.topic-item:not(.topic-unavailable) .topic-arrow { transform: translateX(calc(-12px - 3mm)); }
+/* Upcoming chapters are displayed but cannot be opened. */
+.topic-unavailable { cursor: default; }
+.topic-unavailable .topic-arrow { font-size: 0.83rem; white-space: nowrap; width: auto; text-align: right; margin-right: 0; transform: translateX(calc(-100px + 1mm)); }
+.topic-unavailable:hover { transform: none; }
+/* Soft red hover for Chapters 4–8. */
+.topic-unavailable:has(.topic-number[aria-label="Chapter 4"]):hover,
+.topic-unavailable:has(.topic-number[aria-label="Chapter 5"]):hover,
+.topic-unavailable:has(.topic-number[aria-label="Chapter 6"]):hover,
+.topic-unavailable:has(.topic-number[aria-label="Chapter 7"]):hover,
+.topic-unavailable:has(.topic-number[aria-label="Chapter 8"]):hover { background-color: #fff2f2; }
+</style></head>
+<body>
+<header class="top-bar">
+<div class="top-bar-inner">
+<p class="university-name">University of Bath</p>
+<p class="unit-name">HL10524 · Lab Classes</p>
+</div>
+</header>
+<!-- HomePAGE -->
+<section class="app-page active" data-page="home" id="page-home">
+<main class="course-home">
+<div class="course-home-inner">
+<div class="course-home-intro">
+<p style="font-size: 1.2rem; font-weight: 700; margin: 0 0 8px;">INTERACTIVE ONLINE TEXTBOOK</p>
+<h1>Foundations of R and RStudio for Sport, Health, and Exercise Scientists</h1>
+<p>Learn the fundamentals of R and RStudio through step-by-step guidance, interactive activities, and practical examples designed for learners in Sport, Health, and Exercise Sciences.</p>
+</div>
+<section aria-labelledby="course-topics-heading" class="course-topics">
+<h2 id="course-topics-heading">Chapters</h2>
+<p class="course-topics-intro">Select a chapter below to explore its content. Chapters will become available throughout the academic year.</p>
+<div class="topic-list">
+<a class="topic-item" data-page-link="how-to-use" href="#how-to-use"><div aria-label="Chapter 1" class="topic-number">1</div><div class="topic-text"><h3>How to Use This Textbook</h3><p>Understanding the textbook’s purpose, structure, and interactive features.</p></div><div aria-hidden="true" class="topic-arrow">→</div></a><a class="topic-item" data-page-link="getting-started" href="#getting-started">
+<div aria-label="Chapter 2" class="topic-number">2</div>
+<div class="topic-text">
+<h3>Introduction to University IT</h3>
+<p>The basics of University file storage, accessing your <em>H: drive</em>, and using <em>UniDesk</em>.</p>
+</div>
+<div aria-hidden="true" class="topic-arrow">→</div>
+</a>
+<a class="topic-item" data-page-link="installing-r-rstudio" href="#installing-r-rstudio">
+<div aria-label="Chapter 3" class="topic-number">3</div>
+<div class="topic-text">
+<h3>Installing R and RStudio</h3>
+<p>Installing, updating, accessing, and configuring <em>R</em> and <em>RStudio</em>.</p>
+</div>
+<div aria-hidden="true" class="topic-arrow">→</div>
+</a>
+<div aria-disabled="true" class="topic-item topic-unavailable">
+<div aria-label="Chapter 4" class="topic-number">4</div>
+<div class="topic-text">
+<h3>Introduction to RStudio</h3>
+<p>Getting familiar with <em>RStudio</em> and the <em>R</em> environment.</p>
+</div>
+<div class="topic-arrow">Available Week 6</div>
+</div>
+<div aria-disabled="true" class="topic-item topic-unavailable">
+<div aria-label="Chapter 5" class="topic-number">5</div>
+<div class="topic-text">
+<h3>Organising Your Workspace</h3>
+<p>Preparing your <em>RStudio</em> workspace for data analysis.</p>
+</div>
+<div class="topic-arrow">Available Week 7</div>
+</div>
+<div aria-disabled="true" class="topic-item topic-unavailable">
+<div aria-label="Chapter 6" class="topic-number">6</div>
+<div class="topic-text"><h3>Importing Data</h3><p>Importing and inspecting datasets in <em>RStudio</em>.</p></div>
+<div class="topic-arrow">Available Week 8</div>
+</div>
+<div aria-disabled="true" class="topic-item topic-unavailable">
+<div aria-label="Chapter 7" class="topic-number">7</div>
+<div class="topic-text"><h3>Summarising Data</h3><p>Exploring, summarising, and describing quantitative data in <em>RStudio</em>.</p></div>
+<div class="topic-arrow">Available Week 9</div>
+</div>
+<div aria-disabled="true" class="topic-item topic-unavailable">
+<div aria-label="Chapter 8" class="topic-number">8</div>
+<div class="topic-text"><h3>Visualising Data</h3><p>Creating and interpreting figures in <em>RStudio</em>.</p></div>
+<div class="topic-arrow">Available Week 10</div>
+</div>
+<!-- OTHER RESOURCES -->
+<div style="
+  margin-top: 48px;
+  padding: 28px 30px;
+  background: #fff3cd;
+  border-left: 6px solid #d39e00;
+">
+<h2 id="further-resources-heading" style="
+    margin: 0 0 6px;
+    color: #202329;
+    font-size: 1.65rem;
+    line-height: 1.3;
+  ">
+    Further Resources
+  </h2>
+<p style="
+    margin: 0 0 22px;
+    color: #4b4d50;
+    font-size: 0.98rem;
+  ">
+    Additional guidance and resources to support your learning.
+  </p>
+<a data-page-link="using-genai" href="#using-genai" onmouseout="this.style.backgroundColor='transparent';" onmouseover="this.style.backgroundColor='#f4dfa0';" style="
+       display: block;
+       padding: 16px 10px;
+       border-top: 1px solid #d6c47d;
+       color: #202329;
+       font-weight: 700;
+       text-decoration: none;
+       transition: background-color 0.15s ease;
+     ">
+    Using Generative AI
+  </a>
+<a data-page-link="resource-three" href="#resource-three" onmouseout="this.style.backgroundColor='transparent';" onmouseover="this.style.backgroundColor='#f4dfa0';" style="
+       display: block;
+       padding: 16px 10px;
+       border-top: 1px solid #d6c47d;
+       color: #202329;
+       font-weight: 700;
+       text-decoration: none;
+       transition: background-color 0.15s ease;
+     ">
+    Report Errors or Suggest Improvements
+  </a>
+</div>
+</div>
+</section>
+</div>
+</main>
+<footer style="
+  background-color: #202329;
+  color: #ffffff;
+  padding: 32px 24px;
+  margin-top: 0;
+">
+<div style="
+    max-width: 1180px;
+    margin: 0 auto;
+    font-size: 0.9rem;
+    line-height: 1.7;
+  ">
+<p style="margin: 0 0 8px 0; color: #ffffff;">
+<strong>
+        Developed for HL10524 Research and Study Skills for Sport, Health, and Exercise Scientists
+      </strong><br/>
+      Department for Health · University of Bath
+    </p>
+<p style="margin: 0; color: #ffffff;">
+      © 2026 Noah Marshall and Oly Perkin · Licensed under
+      <a href="https://creativecommons.org/licenses/by/4.0/" rel="noopener noreferrer" style="color: #ffffff; text-decoration: underline;" target="_blank">
+        CC BY 4.0
+      </a> · <a data-page-link="how-to-use" data-target-section="intro-citing" href="#intro-citing" style="color: #ffffff; text-decoration: underline;">How to Cite</a>
+</p>
+</div>
+</footer>
+</section>
+<!-- GETTING STARTED / COMPUTER LAB CLASSES -->
+<section class="app-page" data-page="using-genai" id="page-using-genai">
+<section class="page-heading-section"><div class="page-heading-inner">
+<h1 class="page-heading">Using GenAI for Troubleshooting and Learning Support</h1>
+<p class="page-subheading">Using GenAI to understand and troubleshoot R and RStudio errors responsibly.</p>
+</div></section>
+<main class="narrative-section"><div class="narrative-inner">
+<aside class="sidebar">
+<a class="course-home-button" data-page-link="home" href="#home"><span aria-hidden="true">←</span> Course Home</a>
+<nav aria-label="On this page" class="in-page-nav"><div class="in-page-nav-title"><h2>On this page</h2></div>
+<div class="in-page-nav-links-container"><ul>
+<li><a href="#genai-what">What is GenAI?</a></li>
+<li><a href="#genai-prompt">Writing a useful prompt</a></li>
+<li><a href="#genai-example">Example prompt</a></li>
+<li><a href="#genai-safe">Using GenAI responsibly</a></li>
+</ul></div></nav></aside>
+<article class="content">
+<section class="content-section" id="genai-what">
+<h3>What is GenAI?</h3>
+<p>Generative AI (GenAI) tools, such as Microsoft Copilot, can help you identify and fix common R and RStudio errors. They can be useful for understanding error messages and learning how to write or debug code.</p>
+</section>
+<hr class="section-divider"/>
+<section class="content-section" id="genai-prompt">
+<h3>How to write a useful GenAI prompt</h3>
+<ul>
+<li><strong>Ask a clear question.</strong> For example: “What does this R error mean, and how can I fix it?”</li>
+<li><strong>Ask for an explanation.</strong> For example: “Explain what you have changed and why.”</li>
+<li><strong>Provide relevant context.</strong> Include the line of code that caused the error and the exact error message shown in R. You can also include earlier code if it helps explain the problem, provided it is appropriate to share.</li>
+</ul>
+</section>
+<hr class="section-divider"/>
+<section class="content-section" id="genai-example">
+<h3>Example of a useful prompt</h3>
+<div style="background:#f5f6f8;border-left:4px solid #004489;padding:18px 22px;margin:16px 0 22px;border-radius:4px;">
+<p>“I ran the following code in R:</p>
+<pre style="white-space:pre-wrap;overflow-wrap:anywhere;"><code>mydata &lt;- read.csv("data.numbers")</code></pre>
+<p>I got this error message:</p>
+<pre style="white-space:pre-wrap;overflow-wrap:anywhere;"><code>Error in file(file, "rt") : cannot open the connection
+In addition: Warning message:
+In file(file, "rt") : cannot open file 'data.numbers': No such file or directory</code></pre>
+<p>I am using a MacBook, and I think the file might have been downloaded as a Numbers file. Can you explain what caused this error, what changes you recommend, and why those changes will fix the problem?”</p>
+</div>
+</section>
+<hr class="section-divider"/>
+<section class="content-section" id="genai-safe">
+<h3>When using GenAI, remember</h3>
+<ul>
+<li>Follow the University’s rules and guidance on using GenAI.</li>
+<li>Read and understand any suggested solution before implementing it.</li>
+<li>GenAI can guide you, but you are responsible for checking that the code works.</li>
+</ul>
+<div style="background:#fff3cd;border-left:6px solid #d39e00;padding:18px 22px;margin:20px 0;">
+<p><strong>Note: Do not upload the following to GenAI tools:</strong></p>
+<ul style="margin-bottom:0;">
+<li><strong>Personal data</strong> — do not share personal or sensitive information.</li>
+<li><strong>Assessment content</strong> — do not upload University-owned assessment materials.</li>
+<li><strong>Data downloaded from the GBD database</strong> — sharing these data may breach copyright or licensing conditions and could put the University’s access at risk.</li>
+</ul></div>
+<p>If you have questions about troubleshooting with GenAI, please ask teaching staff during a lab session.</p>
+</section>
+<nav aria-label="Workbook navigation" class="page-navigation"><div></div><div class="nav-home"><a data-page-link="home" href="#home">Course homepage</a></div><div class="nav-next"></div></nav>
+</article></div></main><footer style="
+  background-color: #202329;
+  color: #ffffff;
+  padding: 32px 24px;
+  margin-top: 0;
+">
+<div style="
+    max-width: 1180px;
+    margin: 0 auto;
+    font-size: 0.9rem;
+    line-height: 1.7;
+  ">
+<p style="margin: 0 0 8px 0; color: #ffffff;">
+<strong>
+        Developed for HL10524 Research and Study Skills for Sport, Health, and Exercise Scientists
+      </strong><br/>
+      Department for Health · University of Bath
+    </p>
+<p style="margin: 0; color: #ffffff;">
+      © 2026 Noah Marshall and Oly Perkin · Licensed under
+      <a href="https://creativecommons.org/licenses/by/4.0/" rel="noopener noreferrer" style="color: #ffffff; text-decoration: underline;" target="_blank">
+        CC BY 4.0
+      </a> · <a data-page-link="how-to-use" data-target-section="intro-citing" href="#intro-citing" style="color: #ffffff; text-decoration: underline;">How to Cite</a>
+</p>
+</div>
+</footer>
+</section>
+
+<section class="app-page" data-page="how-to-use" id="page-how-to-use"><section class="page-heading-section"><div class="page-heading-inner"><h1 class="page-heading">How to Use This Textbook</h1><p class="page-subheading">Understanding the textbook’s purpose, structure, and interactive features.</p></div></section><main class="narrative-section"><div class="narrative-inner"><aside class="sidebar"><a class="course-home-button" data-page-link="home" href="#home"><span aria-hidden="true">←</span> Home</a><nav aria-label="Contents" class="in-page-nav"><div class="in-page-nav-title"><h2>Contents</h2></div><div class="in-page-nav-links-container"><ul><li><a href="#intro-outcomes">1.0 Learning Outcomes</a></li><li><a href="#intro-about">1.1 About This Textbook</a></li><li><a href="#intro-features">1.2 Features of This Textbook</a></li><li><a href="#intro-feedback">1.3 Report Errors or Suggest Improvements</a></li><li><a href="#intro-citing">1.4 How to Cite This Textbook</a></li></ul></div></nav></aside><article class="content"><section class="content-section" id="intro-outcomes"><h2>1.0 Learning Outcomes</h2><div style="border-left: 4px solid #202329; padding: 4px 0 4px 22px; margin: 20px 0 32px 8px;"><p style="margin-top: 0;">By the end of this chapter, you should be able to:</p><ul style="margin-bottom: 0;"><li>Understand the purpose and structure of this textbook;</li><li>Navigate between chapters and sections;</li><li>Recognise the different types of activities and guidance used throughout the textbook.</li></ul></div></section><hr class="section-divider"/><section class="content-section" id="intro-about"><h2>1.1 About This Textbook</h2><p>Within this interactive online textbook, you will learn the fundamentals of <em>R</em> and <em>RStudio</em> through step-by-step guidance, interactive activities, and practical examples designed for learners in Sport, Health, and Exercise Sciences.</p>
+<p>The textbook is organised as follows:</p>
+<ol><li><strong>Home page:</strong> The <a data-page-link="home" href="#home"><em>Home</em></a> page is the main page of the textbook, where you can access all available Chapters and <a data-home-section="further-resources-heading" href="#home"><em>Further Resources</em></a>.</li><li><strong>Chapters:</strong> The textbook is organised into Chapters, each focusing on a specific topic or skill. Chapters can take anywhere from 15 to 50 minutes to complete.</li><li><strong>Sections:</strong> Each Chapter is divided into smaller Sections covering different aspects of the topic or skill. Within a Chapter, use the <em>Contents</em> menu to move between Sections, or to return to the <em>Home</em> page.</li></ol>
+<p>To get the most out of this textbook, it is recommended that you:</p>
+<ul><li><strong>Work through the content in order.</strong> Each chapter, section, activity, and quiz builds on what you have learned previously.</li><li><strong>Read the content carefully.</strong> The information has been kept concise, so be sure that you fully understand the explanations and instructions before moving on.</li><li><strong>Take your time.</strong> Learn at your own pace and revisit earlier sections whenever you need to.</li></ul></section><hr class="section-divider"/><section class="content-section" id="intro-features"><h2>1.2 Features of This Textbook</h2><p>Throughout this textbook, you will encounter several features designed to support your learning:</p>
+<ul>
+<li><strong>Learning Outcomes:</strong> These appear at the beginning of each Chapter and describe what you should know or be able to do after completing it.</li>
+<li><strong>Notes:</strong> These provide additional information, helpful tips, or important reminders. For example:</li>
+</ul>
+<div class="workbook-note"><p><strong>Note:</strong> For the best learning experience, we recommend viewing this textbook on a laptop or desktop computer.</p></div>
+<ul><li><strong>Tasks named <em>Your Turn</em>:</strong> These are short practical activities where you apply what you have just learned. For example:</li></ul>
+<div class="your-turn"><strong>Your turn</strong><p>In <a href="#intro-about">Section 1.1</a>, you learned how to navigate the textbook. Now, put this into practice by following the steps below:</p><ol><li>Without scrolling, navigate to Section 1.0, then return to Section 1.2.<div style="margin:0; padding:0;"><em>Hint:</em> Navigate using the <em>Contents</em> menu.</div></li></ol></div>
+<ul><li><strong>Quizzes named <em>A Few Questions</em>:</strong> At the end of each Chapter, a brief quiz will help you to review what you have learned. For example:</li></ul><div class="knowledge-panel"><p class="knowledge-panel-heading">A Few Questions</p><p class="knowledge-panel-intro">To check your understanding, try answering the <strong>single question</strong> below without referring to the material above. You can attempt the question as many times as you like.</p><ol class="knowledge-question-list"><li class="knowledge-question" data-correct="0" data-explanation="This textbook is designed for learners in Sport, Health, and Exercise Sciences."><p class="knowledge-question-title">What field is this textbook most aligned to?</p><label class="knowledge-option"><input name="intro-knowledge-q1" type="radio" value="0"/><span>Sport, Health, and Exercise Sciences</span></label><label class="knowledge-option"><input name="intro-knowledge-q1" type="radio" value="1"/><span>Astrobiology</span></label><p aria-live="polite" class="knowledge-feedback" role="status"></p></li></ol><div class="knowledge-results"><p aria-live="polite"></p><button class="knowledge-reset" hidden="" type="button">Reset questions</button></div></div><ul><li><strong>Glossary:</strong> This section appears at the end of some Chapters and provides a list of important terms and their meanings.</li></ul><table class="glossary-table"><thead><tr><th scope="col">Term</th><th scope="col">Definition</th></tr></thead><tbody><tr><td>Textbook</td><td>A book or digital resource designed to support learning about a subject.</td></tr></tbody></table></section><section class="content-section" id="intro-feedback"><h2>1.3 Report Errors or Suggest Improvements</h2><p>Whether you notice an error, find something confusing, or have a suggestion for improvement, we would be grateful to hear from you. <strong>All feedback is valuable</strong>, however small, and helps us make the textbook clearer, more accessible, and more useful for learners.</p><p>To share your feedback, fill out the <a href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=Ij1-N6FOLUKwrY_MiUBrnk6YHy7kfaNKneWaoDOcii5UQURJMjhQU0JUVDVTN1EzRjgxNkxDMzBESS4u" rel="noopener noreferrer" target="_blank">Report Errors or Suggest Improvements</a> form, which can also be accessed within <a data-home-section="further-resources-heading" href="#home">Further Resources</a> at the bottom of the <em>Home</em> page.</p></section><section class="content-section" id="intro-citing"><h2>1.4 How to Cite This Textbook</h2><p>This textbook is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" rel="noopener noreferrer" target="_blank">Creative Commons Attribution 4.0 International (CC BY 4.0) licence</a>, allowing you to share and adapt its content and design provided you give appropriate credit, link to the licence, and indicate any changes made.</p><p>When using or adapting this textbook in academic work, teaching materials, publications, or elsewhere, please acknowledge the source with an appropriate citation. For example:</p><p><strong>Reference list:</strong> Marshall, N.J. and Perkin, O., 2026. <em>Interactive Online Textbook: Foundations of R and RStudio for sport, health, and exercise scientists</em> [Online]. Bath: University of Bath. Available from: <a href="https://moodle.bath.ac.uk/course/view.php?id=59358" rel="noopener noreferrer" target="_blank">https://moodle.bath.ac.uk/course/view.php?id=59358</a> [Accessed 16 October 2026].</p><p><strong>In-text citation:</strong> (Marshall and Perkin, 2026)</p></section><nav aria-label="Chapter navigation" class="chapter-bottom-navigation"><a class="chapter-nav-button next" data-page-link="getting-started" href="#getting-started">Chapter 2: Introduction to University IT →</a></nav></article></div></main><footer style="
+  background-color: #202329;
+  color: #ffffff;
+  padding: 32px 24px;
+  margin-top: 0;
+">
+<div style="
+    max-width: 1180px;
+    margin: 0 auto;
+    font-size: 0.9rem;
+    line-height: 1.7;
+  ">
+<p style="margin: 0 0 8px 0; color: #ffffff;">
+<strong>
+        Developed for HL10524 Research and Study Skills for Sport, Health, and Exercise Scientists
+      </strong><br/>
+      Department for Health · University of Bath
+    </p>
+<p style="margin: 0; color: #ffffff;">
+      © 2026 Noah Marshall and Oly Perkin · Licensed under
+      <a href="https://creativecommons.org/licenses/by/4.0/" rel="noopener noreferrer" style="color: #ffffff; text-decoration: underline;" target="_blank">
+        CC BY 4.0
+      </a> · <a data-page-link="how-to-use" data-target-section="intro-citing" href="#intro-citing" style="color: #ffffff; text-decoration: underline;">How to Cite</a>
+</p>
+</div>
+</footer>
+</section><section class="app-page" data-page="getting-started" id="page-getting-started">
+<!-- =======================================================
+       PAGE HEADING
+       ======================================================= -->
+<section class="page-heading-section">
+<div class="page-heading-inner">
+<h1 class="page-heading">
+  Introduction to University IT
+</h1>
+<p class="page-subheading">
+  The basics of University file storage, accessing your <em>H: drive</em>, and using <em>UniDesk</em>.
+</p>
+</div>
+</section>
+<!-- =======================================================
+       MAIN NARRATIVE
+       ======================================================= -->
+<main class="narrative-section">
+<div class="narrative-inner">
+<!-- ===================================================
+           Contents
+           =================================================== -->
+<aside class="sidebar">
+<!-- Home -->
+<a class="course-home-button" data-page-link="home" href="#home">
+<span aria-hidden="true">←</span>
+    Home
+  </a>
+<!-- Contents -->
+<nav aria-label="Contents" class="in-page-nav">
+<div class="in-page-nav-title">
+<h2>Contents</h2>
+</div>
+<div class="in-page-nav-links-container">
+<ul>
+<li>
+<a href="#learning-outcomes">2.0 Learning Outcomes</a>
+</li>
+<li>
+<a href="#storage">2.1 OneDrive storage for everything apart from RStudio</a>
+</li>
+<li>
+<a href="#h-drive-storage">2.2 H: drive storage for RStudio</a>
+</li>
+<li>
+<a href="#h-drive">2.3 Accessing your H: drive on a University PC</a>
+</li>
+<li>
+<a href="#lab-classes">2.4 Accessing your H: drive on your own device</a>
+</li>
+<li><a href="#it-help">2.5 Getting IT support</a></li><li><a href="#check-understanding">2.6 Check Your Understanding</a></li></ul>
+</div>
+</nav>
+</aside>
+<!-- ===================================================
+           CONTENT
+           =================================================== -->
+<article class="content">
+<!-- LEARNING OUTCOMES -->
+<section class="content-section" id="learning-outcomes">
+<h2>
+            2.0 Learning Outcomes
+          </h2>
+<div style="
+            border-left: 4px solid #202329;
+            padding: 4px 0 4px 22px;
+            margin: 20px 0 32px 8px;
+          ">
+<p style="margin-top: 0;">By the end of this chapter, you should be able to:</p>
+<ul style="margin-bottom: 0;">
+<li>Identify when to use <em>OneDrive</em> and your <em>H: drive</em> to store University files;</li>
+<li>Access your <em>H: drive</em> on both a University PC and your personal device;</li>
+<li>Save, access, and manage files on your <em>H: drive</em>.</li>
+</ul>
+</div>
+</section>
+<hr class="section-divider"/>
+<!-- STORAGE -->
+<section class="content-section" id="storage"><h2>2.1 OneDrive storage for everything apart from RStudio</h2><p>The University provides you with <strong>500 GB</strong> of secure <strong><em>OneDrive</em></strong> storage. Files saved to <em>OneDrive</em> are stored in the cloud rather than only on one computer, and changes can be synchronised across your devices.</p><p>You can use <em>OneDrive</em> to store and organise your University files, including assessment briefs, coursework you are working on, lecture materials, readings, and other study documents.</p><p>You can access your <em>OneDrive</em> files in several ways:</p><ul><li><strong>On any University computer:</strong> Sign in to a University computer using your University of Bath account. From the taskbar, navigate to <em>File Explorer</em> (the yellow folder icon) → <em>OneDrive</em> (the blue cloud icon). Alternatively, search for "onedrive" in the Windows <em>Start</em> menu.</li><li><strong>On any web browser:</strong> Sign in to <a href="https://www.bath.ac.uk/services/office-365-portal/" rel="noopener noreferrer" target="_blank"><em>Microsoft 365</em></a> using your University of Bath account and navigate to <em>Apps and more</em> → <em>OneDrive</em>. Alternatively, you can sign in directly to <a href="https://onedrive.live.com/login" rel="noopener noreferrer" target="_blank"><em>OneDrive</em></a>.</li><li><strong>On any mobile device:</strong> Download the <a href="https://www.microsoft.com/en-gb/microsoft-365/onedrive/mobile" rel="noopener noreferrer" target="_blank"><em>OneDrive</em> app</a> and sign in using your University of Bath account.</li></ul><div class="storage-options"><div class="storage-option"><h2 id="h-drive-storage">2.2 H: drive storage for RStudio</h2><p>The University also provides you with an <strong><em>H: drive</em></strong>, a secure, backed-up storage space on the University network.</p><p>Throughout this unit, you will use a software application called <strong><em>RStudio</em></strong> to work with data. Because cloud synchronisation can sometimes cause issues when working with <em>RStudio</em> files and datasets, we will use your <em>H: drive</em> rather than <em>OneDrive</em> to store this work.</p></div></div></section>
+<!-- ACCESSING H DRIVE -->
+<section class="content-section" id="h-drive"><h2>2.3 Accessing your H: drive on a University PC</h2><p>You can access your <em>H: drive</em> from any University PC. Your <em>H: drive</em> is automatically available when you sign in using your University of Bath account, so no additional setup is required.</p><p><strong>To access your <em>H: drive</em> on a University PC</strong>, follow the steps below:</p><div class="steps"><div class="step"><h3>Log on to a University PC</h3><p>If you have not done so already, log on to a University PC using your University of Bath account.</p></div><div class="step"><h3>Navigate to your H: drive</h3><p>Open <em>File Explorer</em> → <em>This PC</em> (the monitor screen icon) → <em>H: drive</em> (labelled <em>[your username] (H:)</em>).</p></div></div><div class="workbook-note"><strong>Note:</strong> Do not save any <em>RStudio</em> files or datasets to <em>OneDrive</em>, the <em>X: drive</em>, the <em>C: drive</em>, <em>Desktop</em>, <em>Downloads</em>, or <em>Documents</em>. <strong>All <em>RStudio</em> files and datasets must be stored on your <em>H: drive</em></strong>.</div><div class="your-turn"><strong>Your turn</strong><p>Practise saving a file to your <em>H: drive</em> by following the steps below.</p><ol><li>On a University PC, open <em>Excel</em> and create a new blank workbook.</li><li>Save the workbook to your <em>H: drive</em> as <code>h-drive_practice.xlsx</code>. Close <em>Excel</em> so the file is no longer open.</li><li>You will use this file again in <a data-page-link="getting-started" data-target-section="lab-classes" href="#getting-started">Section 2.4</a>.</li></ol></div></section>
+<hr class="section-divider"/>
+<!-- OWN DEVICE / UNIDESK -->
+<section class="content-section" id="lab-classes"><h2>2.4 Accessing your H: drive on your own device</h2><p>You can also access your <em>H: drive</em> from your personal desktop, laptop, tablet, or mobile device.</p><p><strong><em>UniDesk</em></strong> can give you access to a University desktop, its files, drives, and software without needing to be physically on campus.</p><p>Before continuing, you must have <strong>multi-factor authentication (MFA)</strong> set up on your University of Bath account. If you have not already done this, follow the <a href="https://www.bath.ac.uk/guides/multi-factor-authentication-mfa-at-the-university/" rel="noopener noreferrer" target="_blank">University’s MFA guide</a>.</p><p><strong>To access your <em>H: drive</em> through your personal device</strong>, follow the steps below:</p><div class="steps"><div class="step"><h3>Log in to your personal device</h3><p>Log on to your personal desktop, laptop, tablet, or mobile device as you normally would, using your personal account (not your University of Bath account).</p></div><div class="step"><h3>Install Windows App</h3><p>Search "windows app" within your device's default app store and install the <em>Windows App</em>. For more information, see <a href="https://learn.microsoft.com/en-us/windows-app/get-started-connect-devices-desktops-apps" rel="noopener noreferrer" target="_blank">Microsoft's installation and connection guide</a>.</p></div><div class="step"><h3>Open Windows App and Sign in</h3><p>Launch the <em>Windows App</em> on your device. Sign in using your University of Bath account, and approve the MFA prompt.</p></div><div class="step"><h3>Connect to a University desktop</h3><p>Within the <em>Windows App</em>, navigate to <em>Devices</em> → <em>University of Bath Virtual Desktop</em> → <em>UniDesk</em>. The window display should now look identical to a University PC.</p></div><div class="step"><h3>Navigate to your H: drive</h3><p>Just as you did in <a href="#h-drive">Section 2.3</a>, open <em>File Explorer</em> → <em>This PC</em> → <em>H: drive</em>.</p></div></div><div class="your-turn"><strong>Your turn</strong><p>Now that you can access your <em>H: drive</em> from your own device, practise opening the file you previously saved on a University PC in <a href="#h-drive">Section 2.3</a>:</p><ol><li>On your personal device, locate <code>h-drive_practice.xlsx</code> on your <em>H: drive</em>.</li><li>Open the file in <em>Microsoft Excel</em> and check that you can access its contents.</li><li>Close <em>Microsoft Excel</em> and delete <code>h-drive_practice.xlsx</code> from your <em>H: drive</em>. You will never need to access this file again.</li></ol></div></section><hr class="section-divider"/><section class="content-section" id="it-help"><h2>2.5 Getting IT support</h2><p>If you have trouble signing in to your University of Bath account, accessing <em>OneDrive</em> or your <em>H: drive</em>, or connecting through UniDesk, contact the University’s <a href="https://www.bath.ac.uk/locations/it-service-desk/" rel="noopener noreferrer" target="_blank">IT Service Desk</a> for support. It is often easiest to talk with them in-person at the University of Bath Library.</p></section>
+<hr class="section-divider"/><section class="content-section" id="check-understanding"><h2>2.6 Check Your Understanding</h2><div class="knowledge-panel"><p class="knowledge-panel-heading">A Few Questions</p><p>To check your understanding of <strong>Chapter 2: Introduction to University IT</strong>, try answering the <strong>5 questions</strong> below without referring to the material above. You can attempt each question as many times as you like.</p><ol class="knowledge-question-list"><li class="knowledge-question" data-correct="0" data-explanation="OneDrive is intended for general University documents."><p class="knowledge-question-title">Which storage location would you use for lecture slides, readings, and other documents not associated with <em>RStudio</em>?</p><label class="knowledge-option"><input name="knowledge-q1" type="radio" value="0"/><span><em>OneDrive</em></span></label><label class="knowledge-option"><input name="knowledge-q1" type="radio" value="1"/><span><em>H: drive</em></span></label><label class="knowledge-option"><input name="knowledge-q1" type="radio" value="2"/><span><em>Desktop</em></span></label><label class="knowledge-option"><input name="knowledge-q1" type="radio" value="3"/><span><em>Downloads</em></span></label><p aria-live="polite" class="knowledge-feedback" role="status"></p></li><li class="knowledge-question" data-correct="1" data-explanation="Save your RStudio work and datasets to your H: drive."><p class="knowledge-question-title">Which storage location should you use to save your work involving this textbook?</p><label class="knowledge-option"><input name="knowledge-q2" type="radio" value="0"/><span><em>OneDrive</em></span></label><label class="knowledge-option"><input name="knowledge-q2" type="radio" value="1"/><span><em>H: drive</em></span></label><label class="knowledge-option"><input name="knowledge-q2" type="radio" value="2"/><span><em>Desktop</em></span></label><label class="knowledge-option"><input name="knowledge-q2" type="radio" value="3"/><span><em>Downloads</em></span></label><p aria-live="polite" class="knowledge-feedback" role="status"></p></li><li class="knowledge-question" data-correct="2" data-explanation="Cloud synchronisation can interfere with some RStudio workflows."><p class="knowledge-question-title">Why should you use your <em>H: drive</em> rather than <em>OneDrive</em> for <em>RStudio</em> work?</p><label class="knowledge-option"><input name="knowledge-q3" type="radio" value="0"/><span><em>OneDrive</em> cannot store large files</span></label><label class="knowledge-option"><input name="knowledge-q3" type="radio" value="1"/><span><em>OneDrive</em> is only available on University PCs</span></label><label class="knowledge-option"><input name="knowledge-q3" type="radio" value="2"/><span>Cloud synchronisation can sometimes cause problems when working with <em>RStudio</em></span></label><label class="knowledge-option"><input name="knowledge-q3" type="radio" value="3"/><span>Your <em>H: drive</em> does not require a University account</span></label><p aria-live="polite" class="knowledge-feedback" role="status"></p></li><li class="knowledge-question" data-correct="1" data-explanation="Open &lt;em&gt;File Explorer&lt;/em&gt;, select &lt;em&gt;This PC&lt;/em&gt;, then your &lt;em&gt;H: drive&lt;/em&gt;."><p class="knowledge-question-title">How can you access your <em>H: drive</em> on a University PC?</p><label class="knowledge-option"><input name="knowledge-q4" type="radio" value="0"/><span>Through Microsoft <em>Teams</em></span></label><label class="knowledge-option"><input name="knowledge-q4" type="radio" value="1"/><span>Through <em>File Explorer</em> → <em>This PC</em> → <em>H: drive</em></span></label><label class="knowledge-option"><input name="knowledge-q4" type="radio" value="2"/><span>Through a web browser</span></label><label class="knowledge-option"><input name="knowledge-q4" type="radio" value="3"/><span>Through Microsoft <em>Word</em></span></label><p aria-live="polite" class="knowledge-feedback" role="status"></p></li><li class="knowledge-question" data-correct="1" data-explanation="UniDesk lets you connect to a University desktop remotely."><p class="knowledge-question-title">What is <em>UniDesk</em> used for?</p><label class="knowledge-option"><input name="knowledge-q5" type="radio" value="0"/><span>Submitting coursework</span></label><label class="knowledge-option"><input name="knowledge-q5" type="radio" value="1"/><span>Accessing a University desktop from your own device</span></label><label class="knowledge-option"><input name="knowledge-q5" type="radio" value="2"/><span>Storing files online</span></label><label class="knowledge-option"><input name="knowledge-q5" type="radio" value="3"/><span>Changing your University password</span></label><p aria-live="polite" class="knowledge-feedback" role="status"></p></li></ol><div class="knowledge-results"><p aria-live="polite" id="knowledge-summary"></p><button class="knowledge-reset" hidden="" id="knowledge-reset" type="button">Reset questions</button></div></div></section><nav aria-label="Chapter navigation" class="chapter-bottom-navigation"><a class="chapter-nav-button previous" data-page-link="how-to-use" href="#how-to-use">← Chapter 1: How to Use This Textbook</a><a class="chapter-nav-button next" data-page-link="installing-r-rstudio" href="#installing-r-rstudio">Chapter 3: Installing R and RStudio →</a></nav></article>
+</div>
+</main>
+<footer style="
+  background-color: #202329;
+  color: #ffffff;
+  padding: 32px 24px;
+  margin-top: 0;
+">
+<div style="
+    max-width: 1180px;
+    margin: 0 auto;
+    font-size: 0.9rem;
+    line-height: 1.7;
+  ">
+<p style="margin: 0 0 8px 0; color: #ffffff;">
+<strong>
+        Developed for HL10524 Research and Study Skills for Sport, Health, and Exercise Scientists
+      </strong><br/>
+      Department for Health · University of Bath
+    </p>
+<p style="margin: 0; color: #ffffff;">
+      © 2026 Noah Marshall and Oly Perkin · Licensed under
+      <a href="https://creativecommons.org/licenses/by/4.0/" rel="noopener noreferrer" style="color: #ffffff; text-decoration: underline;" target="_blank">
+        CC BY 4.0
+      </a> · <a data-page-link="how-to-use" data-target-section="intro-citing" href="#intro-citing" style="color: #ffffff; text-decoration: underline;">How to Cite</a>
+</p>
+</div>
+</footer>
+</section>
+<!-- REMAINING TOPIC PAGES -->
+<section class="app-page" data-page="installing-r-rstudio" id="page-installing-r-rstudio">
+<section class="page-heading-section">
+<div class="page-heading-inner">
+<h1 class="page-heading">Installing R and RStudio</h1>
+<p class="page-subheading">Installing, updating, accessing, and configuring <em>R</em> and <em>RStudio</em>.</p>
+</div>
+</section>
+<main class="narrative-section">
+<div class="narrative-inner">
+<aside class="sidebar">
+<a class="course-home-button" data-page-link="home" href="#home"><span aria-hidden="true">←</span> Home</a>
+<nav aria-label="Contents" class="in-page-nav">
+<div class="in-page-nav-title"><h2>Contents</h2></div>
+<div class="in-page-nav-links-container">
+<ul>
+<li><a href="#install-learning-outcomes">3.0 Learning Outcomes</a></li>
+<li><a href="#install-before-you-begin">3.1 Before You Install R and RStudio</a><a href="#install-r-and-rstudio">3.2 Installing or Updating R and RStudio</a></li>
+<li><a href="#rstudio-settings">3.3 RStudio Settings</a></li><li><a href="#install-check-understanding">3.4 Check Your Understanding</a></li>
+</ul>
+</div>
+</nav>
+</aside>
+<article class="content">
+<section class="content-section" id="install-learning-outcomes">
+<h2>3.0 Learning Outcomes</h2>
+<p>By the end of this chapter, you should be able to:</p>
+<div style="border-left:4px solid #202329; padding-left:22px; margin:18px 0 26px 8px;">
+<ul style="margin:0; padding-left:20px;">
+<li>Understand the differences between <em>R</em> and <em>RStudio</em>;</li>
+<li>Access <em>RStudio</em> on a University PC or through <em>UniDesk</em>;</li>
+<li>Install and update <em>R</em> and <em>RStudio</em> on a personal computer;</li>
+<li>Configure key <em>RStudio</em> settings to support a clear and reproducible workspace.</li>
+</ul>
+</div>
+<hr class="section-divider"/>
+</section><section class="content-section" id="install-before-you-begin">
+<h2>3.1 Before You Install R and RStudio</h2>
+<p><strong><em>R</em></strong> is a programming language used to analyse data, perform calculations, and create graphs. <strong><em>RStudio</em></strong> is an integrated development environment (IDE), an application that makes it easier to write, run, and organise <em>R</em> code.</p>
+<p>Throughout this textbook, you will use a University PC or <em>UniDesk</em> on your personal device. Both <em>R</em> and <em>RStudio</em> should already be installed and up to date on these systems.</p>
+<p>To confirm that <em>RStudio</em> is available on a University PC or through <em>UniDesk</em>, follow the steps below:</p>
+<div class="steps"><div class="step"><h3>Log on to a University PC or UniDesk</h3><p>Log on to a University PC or access <em>UniDesk</em> on your personal device (covered in <a data-page-link="getting-started" data-target-section="lab-classes" href="#getting-started">Section 2.4</a>).</p></div><div class="step"><h3>Search for RStudio</h3><p>Open the Windows <em>Start</em> menu and search for “rstudio”.</p></div><div class="step"><h3>Open RStudio</h3><p>If <em>RStudio</em> appears, open it and confirm that it launches successfully.</p></div></div>
+<div class="workbook-note"><p style="margin-bottom:0;"><strong>Note:</strong> If an <em>Update Available!</em> pop-up appears, always select <em>Ignore Update</em>. Updates to University-managed software are handled by University IT Services.</p></div>
+<p><strong>If <em>RStudio</em> opens successfully, no further installation or updates are required.</strong> Read through <a href="#install-r-and-rstudio">Section 3.2</a> without downloading anything, then continue to <a href="#rstudio-settings">Section 3.3</a>.</p>
+<p>If <em>RStudio</em> does not appear or fails to open, contact University IT Services for assistance (see <a data-page-link="getting-started" data-target-section="it-help" href="#getting-started">Section 2.5</a>), as you are unlikely to have permission to install or configure it yourself.</p>
+<hr class="section-divider"/>
+</section>
+<section class="content-section" id="install-r-and-rstudio">
+<h2>3.2 Installing or Updating R and RStudio</h2>
+<p>If you would like to install or update <em>R</em> and <em>RStudio</em> on your personal computer, follow the two steps below in order:</p>
+<div class="steps"><div class="step"><h3>Install or Update Base R</h3>
+<p>Start by <a href="https://cran.rstudio.com/" rel="noopener" target="_blank">visiting CRAN</a> and selecting the download link for your operating system: Windows, macOS, or Linux.</p>
+<ul><li><strong>Windows:</strong> Select <em>Download R for Windows</em> → <em>base</em> → the download link at the top of the page.</li>
+<li><strong>macOS:</strong> Select <em>Download R for macOS</em> → the latest compatible version (select <code>arm64</code> for most modern Macs).</li>
+<li><strong>Linux:</strong> Select <em>Download R for Linux</em> → your Linux distribution, then follow the installation or update instructions.</li></ul>
+<p>Run the installer and follow the instructions. In most cases, you should <strong>use the default installation location</strong>.</p></div>
+<div class="step"><h3>Install or Update RStudio</h3>
+<p>Once <em>R</em> is installed or updated, visit the <a href="https://posit.co/download/rstudio-desktop/" rel="noopener" target="_blank">RStudio Desktop download page</a> and choose the installer for your operating system.</p>
+<ul><li><strong>Windows:</strong> Select <em>Download RStudio</em> → the Windows installer (<code>.exe</code>), then follow the instructions.</li>
+<li><strong>macOS:</strong> Select <em>Download RStudio</em> → the macOS installer (<code>.dmg</code>), then follow the instructions.</li>
+<li><strong>Linux:</strong> Select <em>Download RStudio</em> → the installer for your Linux distribution, then follow the installation or update instructions.</li></ul>
+<p>Run the installer and follow the instructions. In most cases, you should <strong>use the default installation location</strong>.</p></div></div></section>
+<hr class="section-divider"/><section class="content-section" id="rstudio-settings">
+<h2>3.3 RStudio Settings</h2>
+<p>Before you begin using <em>RStudio</em>, we recommend making a few adjustments to make it easier to access and use.</p>
+<ul><li><strong>Pin RStudio for easy access:</strong> To make <em>RStudio</em> easier to access in the future, you can pin it to the <em>taskbar</em> (Windows) or <em>Dock</em> (Mac) at the bottom of your screen. To do this, open <em>RStudio</em>, right-click its icon in the <em>taskbar</em> or <em>Dock</em>, and select <em>Pin to taskbar</em> (Windows) or <em>Options → Keep in Dock</em> (Mac).</li>
+<li><strong>Start with a clear workspace:</strong> In <em>RStudio</em>, go to <em>Tools → Global Options → General</em> and untick <em>Restore .RData into workspace at startup</em>. This prevents objects from previous sessions being automatically loaded when you open <em>RStudio</em>.</li>
+<li><strong>Do not automatically save the workspace:</strong> Under <em>General</em>, set <em>Save workspace to .RData on exit</em> to <em>Never</em>. This encourages you to save your code in scripts rather than relying on previously saved objects.</li>
+<li><strong>Choose an accessible appearance:</strong> Under <em>Appearance</em>, you can customise <em>RStudio</em> by choosing a light or dark theme and adjusting the font size to suit your preferences.</li>
+</ul><p>Unless you have a specific reason to change them, <strong>we recommend leaving all other settings at their defaults.</strong></p>
+<figure style="margin:28px 0;">
+<img alt="RStudio Global Options showing General and Appearance settings" src="https://healthteachr.github.io/images/appx/rstudio_settings_general_appearance.png" style="max-width:100%;height:auto;border:1px solid #d8d8d8;border-radius:6px;"/>
+<figcaption style="margin-top:8px;"><em>Figure: RStudio General and Appearance settings</em></figcaption>
+</figure>
+<figure style="margin:28px 0;">
+<img alt="RStudio Global Options showing Code settings" src="https://healthteachr.github.io/images/appx/rstudio_settings_code.png" style="max-width:100%;height:auto;border:1px solid #d8d8d8;border-radius:6px;"/>
+<figcaption style="margin-top:8px;"><em>Figure: RStudio Code settings</em></figcaption>
+</figure>
+</section><hr class="section-divider"/><section class="content-section" id="install-check-understanding"><h2>3.4 Check Your Understanding</h2><div class="knowledge-panel"><p class="knowledge-panel-heading">A Few Questions</p><p>To check your understanding of Chapter 3, try answering the <strong>4 questions</strong> below without referring to the material above. You can attempt each question as many times as you like.</p><ol class="knowledge-question-list"><li class="knowledge-question" data-correct="0" data-explanation="R is a programming language for analysing data, calculations, and graphs."><p class="knowledge-question-title">What is <em>R</em>?</p><label class="knowledge-option"><input name="install-knowledge-q1" type="radio" value="0"/><span>A programming language used to analyse data, perform calculations, and create graphs.</span></label><label class="knowledge-option"><input name="install-knowledge-q1" type="radio" value="1"/><span>An application used to store University files.</span></label><label class="knowledge-option"><input name="install-knowledge-q1" type="radio" value="2"/><span>A website used to download datasets.</span></label><label class="knowledge-option"><input name="install-knowledge-q1" type="radio" value="3"/><span>A type of computer operating system.</span></label><p aria-live="polite" class="knowledge-feedback" role="status"></p></li><li class="knowledge-question" data-correct="1" data-explanation="RStudio is an IDE used to work with R code."><p class="knowledge-question-title">What is <em>RStudio</em>?</p><label class="knowledge-option"><input name="install-knowledge-q2" type="radio" value="0"/><span>A programming language used to analyse data.</span></label><label class="knowledge-option"><input name="install-knowledge-q2" type="radio" value="1"/><span>An integrated development environment (IDE) that makes it easier to write, run, and organise <em>R</em> code.</span></label><label class="knowledge-option"><input name="install-knowledge-q2" type="radio" value="2"/><span>A cloud storage service for saving <em>R</em> files.</span></label><label class="knowledge-option"><input name="install-knowledge-q2" type="radio" value="3"/><span>A website used to submit coursework.</span></label><p aria-live="polite" class="knowledge-feedback" role="status"></p></li><li class="knowledge-question" data-correct="1" data-explanation="Workbook activities must be completed using University PCs or UniDesk."><p class="knowledge-question-title">Where should you access <em>RStudio</em> to complete the activities in this textbook?</p><label class="knowledge-option"><input name="install-knowledge-q3" type="radio" value="0"/><span>Only on your personal computer.</span></label><label class="knowledge-option"><input name="install-knowledge-q3" type="radio" value="1"/><span>On a University PC or through <em>UniDesk</em>.</span></label><label class="knowledge-option"><input name="install-knowledge-q3" type="radio" value="2"/><span>Through Microsoft 365.</span></label><label class="knowledge-option"><input name="install-knowledge-q3" type="radio" value="3"/><span>Through a web browser.</span></label><p aria-live="polite" class="knowledge-feedback" role="status"></p></li><li class="knowledge-question" data-correct="1" data-explanation="Install R first, then RStudio."><p class="knowledge-question-title">If you want to install <em>R</em> and <em>RStudio</em> on your personal computer for use outside this unit, which should you install first?</p><label class="knowledge-option"><input name="install-knowledge-q4" type="radio" value="0"/><span><em>RStudio</em>.</span></label><label class="knowledge-option"><input name="install-knowledge-q4" type="radio" value="1"/><span><em>R</em>.</span></label><label class="knowledge-option"><input name="install-knowledge-q4" type="radio" value="2"/><span>It does not matter which you install first.</span></label><label class="knowledge-option"><input name="install-knowledge-q4" type="radio" value="3"/><span>Both must be installed at the same time.</span></label><p aria-live="polite" class="knowledge-feedback" role="status"></p></li></ol><div class="knowledge-results"><p aria-live="polite" id="install-knowledge-summary"></p><button class="knowledge-reset" hidden="" id="install-knowledge-reset" type="button">Reset questions</button></div></div></section>
+<nav aria-label="Chapter navigation" class="chapter-bottom-navigation"><a class="chapter-nav-button previous" data-page-link="getting-started" href="#getting-started">← Chapter 2: Introduction to University IT</a><a class="chapter-nav-button next" data-page-link="introduction-to-r" href="#introduction-to-r">Chapter 4: Introduction to RStudio →</a></nav></article>
+</div>
+</main>
+<footer style="
+  background-color: #202329;
+  color: #ffffff;
+  padding: 32px 24px;
+  margin-top: 0;
+">
+<div style="
+    max-width: 1180px;
+    margin: 0 auto;
+    font-size: 0.9rem;
+    line-height: 1.7;
+  ">
+<p style="margin: 0 0 8px 0; color: #ffffff;">
+<strong>
+        Developed for HL10524 Research and Study Skills for Sport, Health, and Exercise Scientists
+      </strong><br/>
+      Department for Health · University of Bath
+    </p>
+<p style="margin: 0; color: #ffffff;">
+      © 2026 Noah Marshall and Oly Perkin · Licensed under
+      <a href="https://creativecommons.org/licenses/by/4.0/" rel="noopener noreferrer" style="color: #ffffff; text-decoration: underline;" target="_blank">
+        CC BY 4.0
+      </a> · <a data-page-link="how-to-use" data-target-section="intro-citing" href="#intro-citing" style="color: #ffffff; text-decoration: underline;">How to Cite</a>
+</p>
+</div>
+</footer>
+</section>
+<section class="app-page" data-page="introduction-to-r" id="page-introduction-to-r">
+<section class="page-heading-section">
+<div class="page-heading-inner">
+<h1 class="page-heading">Introduction to RStudio</h1>
+<p class="page-subheading">Getting familiar with RStudio, packages, and functions in R.</p>
+</div>
+</section>
+<main class="narrative-section">
+<div class="narrative-inner">
+<aside class="sidebar">
+<a class="course-home-button" data-page-link="home" href="#home">
+<span aria-hidden="true">←</span>
+          Home
+        </a>
+<nav aria-label="Contents" class="in-page-nav">
+<div class="in-page-nav-title"><h2>Contents</h2></div>
+<div class="in-page-nav-links-container">
+<ul>
+<li><a href="#rstudio-learning-outcomes">4.0 Learning Outcomes</a></li>
+<li><a href="#r-and-rstudio">4.1 R and RStudio</a></li>
+<li><a href="#opening-rstudio">4.2 Opening RStudio</a></li>
+<li><a href="#first-r-code">4.3 Running your first R code</a></li>
+<li><a href="#packages-functions">4.4 Packages and functions</a></li>
+<li><a href="#installing-package">4.5 Installing a package</a></li>
+<li><a href="#loading-package">4.6 Loading a package</a></li>
+<li><a href="#using-function">4.7 Using a function and arguments</a></li>
+<li><a href="#objects">4.8 Objects</a></li>
+<li><a href="#extra-exercise">4.9 Extra Exercise</a></li>
+<li><a href="#lab3-glossary">4.10 Glossary</a></li>
+</ul>
+</div>
+</nav>
+</aside>
+<article class="content">
+<section class="content-section" id="rstudio-learning-outcomes">
+<h2>4.0 Learning Outcomes</h2>
+<p>By the end of this chapter, you should be able to:</p>
+<div style="border-left:4px solid #202329; padding-left:22px; margin:18px 0 26px 8px;">
+<ul style="margin:0; padding-left:20px;">
+<li>Identify the main areas of the RStudio interface and describe their purpose;</li>
+<li>Install and load R packages using the Console;</li>
+<li>Run R functions and modify their arguments;</li>
+<li>Create, inspect, and use simple R objects.</li>
+</ul>
+</div>
+</section>
+<hr class="section-divider"/>
+<section class="content-section" id="r-and-rstudio">
+<h2>4.1 R and RStudio</h2>
+<p>In the previous session, you installed R and RStudio. R is a programming language that allows you to write and run code. RStudio is a program that makes working with R easier.</p>
+<p>When you installed R, an application called “R” was also installed. We will not use this application directly. Instead, we will use RStudio.</p>
+<p><strong>RStudio</strong> is an Integrated Development Environment (IDE). It provides a convenient place to write and run R code, manage files, view data, create graphs, and more.</p>
+</section>
+<hr class="section-divider"/>
+<section class="content-section" id="opening-rstudio">
+<h2>4.2 Opening RStudio</h2>
+<p>Open <strong>RStudio</strong> on your computer. On a University computer, search for <strong>RStudio</strong> from the Start menu and open the application.</p>
+<p>When RStudio opens, you will see four different areas on the screen. These are called <strong>panes</strong>.</p>
+<figure style="margin:20px 0 26px;">
+<img alt="Screenshot of the RStudio IDE showing its four main panes" src="https://healthteachr.github.io/images/intro/rstudio.png" style="display:block;max-width:100%;height:auto;border:1px solid #d8d8d8;border-radius:6px;"/>
+<figcaption style="margin-top:8px;"><em>Figure: The RStudio IDE</em></figcaption>
+</figure>
+<ul>
+<li><strong>Upper left – Source:</strong> Where you write, edit, and save your code. This area may not appear until you open a file.</li>
+<li><strong>Lower left – Console:</strong> Where you type and run code directly and see the results. Code entered here is not automatically saved.</li>
+<li><strong>Upper right – Environment and Help:</strong>
+<ul>
+<li><strong>Environment:</strong> Shows objects (such as data) you have created and stored in R.</li>
+<li><strong>Help:</strong> Provides information and guidance on using R functions and packages.</li>
+</ul>
+</li>
+<li><strong>Lower right – Files, Plots, Packages, and Viewer:</strong>
+<ul>
+<li><strong>Files:</strong> Browse files and folders on your computer.</li>
+<li><strong>Plots:</strong> View graphs you create in R.</li>
+<li><strong>Packages:</strong> View, install, and manage R packages.</li>
+<li><strong>Viewer:</strong> Display certain types of output, such as interactive graphs and web content.</li>
+</ul>
+</li>
+</ul>
+</section>
+<hr class="section-divider"/>
+<section class="content-section" id="first-r-code">
+<h2>4.3 Running your first R code</h2>
+<p>Let's start by running your first line of R code in RStudio.</p>
+<ol>
+<li>Find the <strong>Console</strong> in RStudio (the bottom-left panel).</li>
+<li>Click the <strong>copy button</strong> on the right-hand side of the code box below.</li>
+<li><strong>Paste</strong> the code into the Console and press <strong>Enter</strong> to run it.</li>
+</ol>
+<div class="code-with-filename">
+<div class="code-with-filename-file"><strong>Run in the console</strong></div>
+<div class="code-example">
+<button aria-label="Copy R code" class="copy-code-button" data-tooltip="Copy" type="button"><svg aria-hidden="true" focusable="false" viewbox="0 0 24 24"><rect height="10" rx="1.5" width="10" x="9" y="9"></rect><path d="M15 9V6.5A1.5 1.5 0 0 0 13.5 5h-8A1.5 1.5 0 0 0 4 6.5v8A1.5 1.5 0 0 0 5.5 16H9"></path></svg></button>
+<pre><code><span class="code-line">1 + 1</span></code></pre>
+</div>
+</div>
+<p>R should return <code>[1] 2</code>.</p>
+<p>You've just run your first line of R code! R calculated <code>1 + 1</code> and returned <code>2</code>. The <code>[1]</code> indicates where the output begins.</p>
+<p>Throughout this textbook, you can use the copy button on code boxes to copy code into the Console. You can also type the code directly.</p>
+<div class="your-turn-box" style="background:#edf8ef;border-left:4px solid #5a9c68;border-radius:8px;padding:16px 20px;margin:22px 0;">
+<p style="margin-top:0;"><strong>Your turn</strong></p>
+<p>Try typing your own calculations directly into the Console. Change the numbers and experiment with these mathematical symbols:</p>
+<ul>
+<li><code>+</code> Addition (e.g., <code>5 + 3</code>)</li>
+<li><code>-</code> Subtraction (e.g., <code>10 - 4</code>)</li>
+<li><code>*</code> Multiplication (e.g., <code>6 * 2</code>)</li>
+<li><code>/</code> Division (e.g., <code>12 / 3</code>)</li>
+<li><code>^</code> Powers (e.g., <code>2 ^ 3</code>)</li>
+</ul>
+<p style="margin-bottom:0;">Try combining calculations using brackets, such as <code>(2 + 3) * 4</code>. Press <strong>Enter</strong> after each calculation to see the result.</p>
+</div>
+</section>
+<hr class="section-divider"/>
+<section class="content-section" id="packages-functions">
+<h2>4.4 Packages and functions</h2>
+<p>Like we just showed, R comes with some built-in functionality, but some tasks require additional tools. For example, you might want to create more advanced graphs, analyse particular types of data, or use specialised statistical methods.</p>
+<p>These additional tools are called <strong>packages</strong>. Packages extend what R can do by providing new functions.</p>
+<p>Most packages are downloaded from CRAN, the Comprehensive R Archive Network. There is an important difference between <strong>installing</strong> and <strong>loading</strong> a package, which we will cover next.</p>
+</section>
+<hr class="section-divider"/>
+<section class="content-section" id="installing-package">
+<h2>4.5 Installing a package</h2>
+<p>Packages are installed using <a href="https://rdrr.io/r/utils/install.packages.html" rel="noopener noreferrer" target="_blank">install.packages()</a>. Think of this like installing an app on your phone: <strong>you only need to install a package once</strong>, but you will need to load it each time you start a new R session.</p>
+<p>Let's start by installing a simple package called <strong>beepr</strong>, which allows R to play sounds.</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file"><strong>Run in the console</strong></div>
+<div class="code-example">
+<button aria-label="Copy R code" class="copy-code-button" data-tooltip="Copy" type="button"><svg aria-hidden="true" focusable="false" viewbox="0 0 24 24"><rect height="10" rx="1.5" width="10" x="9" y="9"></rect><path d="M15 9V6.5A1.5 1.5 0 0 0 13.5 5h-8A1.5 1.5 0 0 0 4 6.5v8A1.5 1.5 0 0 0 5.5 16H9"></path></svg></button>
+<pre><code><span class="code-line"><span class="r-fn">install.packages</span>(<span class="r-str">"beepr"</span>)</span></code></pre>
+</div>
+</div>
+<p>R will download and install the package. The installation is complete when R finishes the command without an error.</p>
+<div class="panel panel-warning">
+<p><strong>Messages, warnings, and errors</strong></p>
+<p>You may see messages or warnings appear in the Console when installing a package. These do not necessarily mean that something has gone wrong. However, if you see a message beginning with <strong>“Error”</strong>, the package has not installed successfully and you may need to troubleshoot the issue.</p>
+</div>
+</section>
+<hr class="section-divider"/>
+<section class="content-section" id="loading-package">
+<h2>4.6 Loading a package</h2>
+<p>Packages are loaded using the <code>library()</code> function. Think of this like launching an app on your phone: you install it once, but need to launch it each time you want to use it. Similarly, each time you start a new R session, you will need to load the packages you want to use.</p>
+<p>After installing the <strong>beepr</strong> package, load it into your current R session:</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file"><strong>Run in the console</strong></div>
+<div class="code-example">
+<button aria-label="Copy R code" class="copy-code-button" data-tooltip="Copy" type="button"><svg aria-hidden="true" focusable="false" viewbox="0 0 24 24"><rect height="10" rx="1.5" width="10" x="9" y="9"></rect><path d="M15 9V6.5A1.5 1.5 0 0 0 13.5 5h-8A1.5 1.5 0 0 0 4 6.5v8A1.5 1.5 0 0 0 5.5 16H9"></path></svg></button>
+<pre><code><span class="code-line"><span class="r-fn">library</span>(beepr)</span></code></pre>
+</div>
+</div>
+<p>You may see messages appear in the Console when you load a package. This is normal and does not necessarily mean that something has gone wrong. However, if you see a message beginning with “Error”, the package may not have loaded successfully.</p>
+</section>
+<hr class="section-divider"/>
+<section class="content-section" id="using-function">
+<h2>4.7 Using a function and arguments</h2>
+<p>Now that you've installed and loaded the <code>beepr</code> package, let's use one of its functions.</p>
+<p>A <strong>function</strong> is a set of instructions that tells R to perform a particular task. Functions have names followed by parentheses <code>()</code>, which can contain <strong>arguments</strong>.</p>
+<p>Arguments are options that allow you to change what a function does.</p>
+<p>Let's start by running <code>beep()</code> without any arguments.</p>
+<div class="code-with-filename"><div class="code-with-filename-file"><strong>Run in the console</strong></div><div class="code-example"><button aria-label="Copy R code" class="copy-code-button" data-tooltip="Copy" type="button"><svg aria-hidden="true" focusable="false" viewbox="0 0 24 24"><rect height="10" rx="1.5" width="10" x="9" y="9"></rect><path d="M15 9V6.5A1.5 1.5 0 0 0 13.5 5h-8A1.5 1.5 0 0 0 4 6.5v8A1.5 1.5 0 0 0 5.5 16H9"></path></svg></button><pre><code><span class="code-line"><span class="r-fn">beep</span>()</span></code></pre></div></div>
+<p>By default, <code>beep()</code> plays sound number <code>1</code>. You can change the sound by adding the <code>sound</code> argument inside the parentheses.</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file"><strong>Run in the console</strong></div>
+<div class="code-example">
+<button aria-label="Copy R code" class="copy-code-button" data-tooltip="Copy" type="button"><svg aria-hidden="true" focusable="false" viewbox="0 0 24 24"><rect height="10" rx="1.5" width="10" x="9" y="9"></rect><path d="M15 9V6.5A1.5 1.5 0 0 0 13.5 5h-8A1.5 1.5 0 0 0 4 6.5v8A1.5 1.5 0 0 0 5.5 16H9"></path></svg></button>
+<pre><code><span class="code-line"><span class="r-fn">beep</span>(<span class="r-arg">sound</span> = <span class="r-num">8</span>)</span></code></pre>
+</div>
+</div>
+<p>This tells R to run the <code>beep()</code> function and play sound number <code>8</code>.</p>
+<div class="your-turn-box" style="background:#edf8ef;border-left:4px solid #5a9c68;border-radius:8px;padding:16px 20px;margin:22px 0;">
+<p style="margin-top:0;"><strong>Your turn</strong></p>
+<p>Try changing the <code>sound</code> argument to different whole numbers between <strong>1 and 11</strong>.</p>
+<p style="margin-bottom:0;">Which sounds do you hear?</p>
+</div>
+<p>Some arguments are required, while others have default values and only need to be specified if you want to change them.</p>
+<p>You can find information about a function and its arguments using <code>?</code> followed by the function name.</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file"><strong>Run in the console</strong></div>
+<div class="code-example">
+<button aria-label="Copy R code" class="copy-code-button" data-tooltip="Copy" type="button"><svg aria-hidden="true" focusable="false" viewbox="0 0 24 24"><rect height="10" rx="1.5" width="10" x="9" y="9"></rect><path d="M15 9V6.5A1.5 1.5 0 0 0 13.5 5h-8A1.5 1.5 0 0 0 4 6.5v8A1.5 1.5 0 0 0 5.5 16H9"></path></svg></button>
+<pre><code><span class="code-line">?<span class="r-fn">beep</span></span></code></pre>
+</div>
+</div>
+<p>The documentation will appear in the <strong>Help</strong> pane in RStudio. You can also type a function name and press <strong>Tab</strong> to see its available arguments.</p>
+<p>If you type a function into the Console, it will run as soon as you press Enter. If you write code in the Source pane, it will not run until you tell RStudio to run it.</p>
+</section>
+<hr class="section-divider"/>
+<section class="content-section" id="objects">
+<h2>4.8 Objects</h2>
+<p>R can store information in <strong>objects</strong> so that you can use it again later. You create an object using the assignment operator <code>&lt;-</code>.</p>
+<p>For this example, we will use the University of Bath and an imaginary ranking of 5 to practise creating objects:</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file"><strong>Run in the console</strong></div>
+<div class="code-example">
+<button aria-label="Copy R code" class="copy-code-button" data-tooltip="Copy" type="button"><svg aria-hidden="true" focusable="false" viewbox="0 0 24 24"><rect height="10" rx="1.5" width="10" x="9" y="9"></rect><path d="M15 9V6.5A1.5 1.5 0 0 0 13.5 5h-8A1.5 1.5 0 0 0 4 6.5v8A1.5 1.5 0 0 0 5.5 16H9"></path></svg></button>
+<pre><code><span class="code-line">name <span class="r-op">&lt;-</span> <span class="r-str">"University of Bath"</span></span><span class="code-line">rank <span class="r-op">&lt;-</span> <span class="r-num">5</span></span></code></pre>
+</div>
+</div>
+<p>Here, <code>"University of Bath"</code> is stored in an object called <code>name</code>, and the example ranking <code>5</code> is stored in an object called <code>rank</code>. You should see both objects appear in the <strong>Environment</strong> pane.</p>
+<p>To see what an object contains, type its name into the Console and press Enter:</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file"><strong>Run in the console</strong></div>
+<div class="code-example">
+<button aria-label="Copy R code" class="copy-code-button" data-tooltip="Copy" type="button"><svg aria-hidden="true" focusable="false" viewbox="0 0 24 24"><rect height="10" rx="1.5" width="10" x="9" y="9"></rect><path d="M15 9V6.5A1.5 1.5 0 0 0 13.5 5h-8A1.5 1.5 0 0 0 4 6.5v8A1.5 1.5 0 0 0 5.5 16H9"></path></svg></button>
+<pre><code><span class="code-line">name</span><span class="code-line">rank</span></code></pre>
+</div>
+</div>
+<p>Objects can also be used in functions and calculations. For example, we can convert the university name to uppercase and subtract two from the example ranking:</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file"><strong>Run in the console</strong></div>
+<div class="code-example">
+<button aria-label="Copy R code" class="copy-code-button" data-tooltip="Copy" type="button"><svg aria-hidden="true" focusable="false" viewbox="0 0 24 24"><rect height="10" rx="1.5" width="10" x="9" y="9"></rect><path d="M15 9V6.5A1.5 1.5 0 0 0 13.5 5h-8A1.5 1.5 0 0 0 4 6.5v8A1.5 1.5 0 0 0 5.5 16H9"></path></svg></button>
+<pre><code><span class="code-line"><span class="r-fn">toupper</span>(name)</span><span class="code-line">rank <span class="r-op">-</span> <span class="r-num">2</span></span></code></pre>
+</div>
+</div>
+<p>Objects can store other types of information too. For example, we can store today’s date and the date the University of Bath was officially founded:</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file"><strong>Run in the console</strong></div>
+<div class="code-example">
+<button aria-label="Copy R code" class="copy-code-button" data-tooltip="Copy" type="button"><svg aria-hidden="true" focusable="false" viewbox="0 0 24 24"><rect height="10" rx="1.5" width="10" x="9" y="9"></rect><path d="M15 9V6.5A1.5 1.5 0 0 0 13.5 5h-8A1.5 1.5 0 0 0 4 6.5v8A1.5 1.5 0 0 0 5.5 16H9"></path></svg></button>
+<pre><code><span class="code-line">today <span class="r-op">&lt;-</span> <span class="r-fn">Sys.Date</span>()</span><span class="code-line">founded <span class="r-op">&lt;-</span> <span class="r-fn">as.Date</span>(<span class="r-str">"1966-10-25"</span>)</span></code></pre>
+</div>
+</div>
+<p><code>today</code> stores the current date returned by R, while <code>founded</code> stores 25 October 1966, when the University of Bath was established by Royal Charter.</p>
+<p>We can then calculate how many days have passed since the University was founded:</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file"><strong>Run in the console</strong></div>
+<div class="code-example">
+<button aria-label="Copy R code" class="copy-code-button" data-tooltip="Copy" type="button"><svg aria-hidden="true" focusable="false" viewbox="0 0 24 24"><rect height="10" rx="1.5" width="10" x="9" y="9"></rect><path d="M15 9V6.5A1.5 1.5 0 0 0 13.5 5h-8A1.5 1.5 0 0 0 4 6.5v8A1.5 1.5 0 0 0 5.5 16H9"></path></svg></button>
+<pre><code><span class="code-line">bath_days_old <span class="r-op">&lt;-</span> today <span class="r-op">-</span> founded</span><span class="code-line">bath_days_old</span></code></pre>
+</div>
+</div>
+<p>Here, R subtracts the founding date from today’s date and stores the result in a new object called <code>bath_days_old</code>.</p>
+<div class="your-turn-box" style="background:#edf8ef;border-left:4px solid #5a9c68;border-radius:8px;padding:16px 20px;margin:22px 0;">
+<p style="margin-top:0;"><strong>Your turn</strong></p>
+<ol>
+<li>Now try the same calculation for yourself. Run the following line of code, replacing the example date with <strong>your own date of birth</strong> (in <code>YYYY-MM-DD</code> format).</li>
+</ol>
+<div class="code-with-filename">
+<div class="code-with-filename-file"><strong>Run in the console</strong></div>
+<div class="code-example">
+<button aria-label="Copy R code" class="copy-code-button" data-tooltip="Copy" type="button"><svg aria-hidden="true" focusable="false" viewbox="0 0 24 24"><rect height="10" rx="1.5" width="10" x="9" y="9"></rect><path d="M15 9V6.5A1.5 1.5 0 0 0 13.5 5h-8A1.5 1.5 0 0 0 4 6.5v8A1.5 1.5 0 0 0 5.5 16H9"></path></svg></button>
+<pre><code><span class="code-line">birthday <span class="r-op">&lt;-</span> <span class="r-fn">as.Date</span>(<span class="r-str">"2001-12-25"</span>)</span></code></pre>
+</div>
+</div>
+<ol start="2">
+<li>Now run these two lines of code to calculate and display how many days old you are. We use <code>your_days_old</code> so your result is stored separately from <code>bath_days_old</code>.</li>
+</ol>
+<div class="code-with-filename">
+<div class="code-with-filename-file"><strong>Run in the console</strong></div>
+<div class="code-example">
+<button aria-label="Copy R code" class="copy-code-button" data-tooltip="Copy" type="button"><svg aria-hidden="true" focusable="false" viewbox="0 0 24 24"><rect height="10" rx="1.5" width="10" x="9" y="9"></rect><path d="M15 9V6.5A1.5 1.5 0 0 0 13.5 5h-8A1.5 1.5 0 0 0 4 6.5v8A1.5 1.5 0 0 0 5.5 16H9"></path></svg></button>
+<pre><code><span class="code-line">your_days_old <span class="r-op">&lt;-</span> today <span class="r-op">-</span> birthday</span><span class="code-line">your_days_old</span></code></pre>
+</div>
+</div>
+</div>
+<p>You will create and work with many different objects throughout this course. For now, the important thing to remember is that an <strong>object allows you to give something a name, store it, and use it again later</strong>.</p>
+</section>
+<section class="content-section" id="extra-exercise">
+<h2>4.9 Extra Exercise</h2>
+<p>In this extra exercise, you'll practise installing and loading a package, creating an object, and using a function with multiple arguments.</p>
+<div class="your-turn-box" style="background:#edf8ef;border-left:4px solid #5a9c68;border-radius:8px;padding:16px 20px;margin:22px 0;">
+<p style="margin-top:0;"><strong>Task: Make an animal talk in R</strong></p>
+<ol>
+<li><strong>Install the package.</strong> Install a package called <code>cowsay</code>, which allows you to display messages spoken by different animals and characters.<p><em>Hint: Look back to Section 4.5, when you installed the <code>beepr</code> package. Notice how quotation marks are used.</em></p></li>
+<li><strong>Load the package.</strong> Once installed, load <code>cowsay</code> into your current R session.<p><em>Hint: Look back to Section 4.6, when you loaded the <code>beepr</code> package.</em></p></li>
+<li><strong>Create an object.</strong> Create an object called <code>message</code> containing something you want your animal to say.<p><em>Hint: Look back to Section 4.8, when you stored University of Bath in an object called <code>name</code>. Remember to put quotation marks around your message.</em></p></li>
+<li><strong>Make a cow speak.</strong> Use the <code>say()</code> function with two arguments: <code>what</code> specifies the message, and <code>by</code> specifies the animal. Separate the two arguments with a comma (<code>,</code>). If you have completed the previous steps correctly, you should be able to run the following code in the Console:</li>
+</ol>
+<div class="code-with-filename"><div class="code-with-filename-file"><strong>Run in the console</strong></div><div class="code-example"><button aria-label="Copy R code" class="copy-code-button" data-tooltip="Copy" type="button"><svg aria-hidden="true" focusable="false" viewbox="0 0 24 24"><rect height="10" rx="1.5" width="10" x="9" y="9"></rect><path d="M15 9V6.5A1.5 1.5 0 0 0 13.5 5h-8A1.5 1.5 0 0 0 4 6.5v8A1.5 1.5 0 0 0 5.5 16H9"></path></svg></button><pre><code><span class="code-line"><span class="r-fn">say</span>(what = message, by = <span class="r-str">"cow"</span>)</span></code></pre></div></div>
+<p>You should now see a cow appear in the Console, displaying the message stored in your <code>message</code> object.</p>
+<ol start="5"><li><strong>Make a cat speak.</strong> Now modify the code from Step 4 to make a cat say your message instead.<p><em>Hint: Change the <code>by</code> argument from <code>"cow"</code> to <code>"cat"</code>. Remember that the animal's name needs quotation marks.</em></p><p><strong>Now try making your message appear with other animals!</strong></p></li></ol>
+</div>
+</section>
+<hr class="section-divider"/>
+<section class="content-section" id="lab3-glossary">
+<h2>4.10 Glossary</h2>
+<p>This glossary defines common terms you have encountered in this lab. Learning this vocabulary can help you understand R instructions and search for solutions when you need help.</p>
+<div class="glossary-table-wrap">
+<table class="glossary-table">
+<thead><tr><th scope="col">Term</th><th scope="col">Definition</th></tr></thead>
+<tbody>
+<tr><td>argument</td><td>An input or option you give to a function to control what it does.</td></tr>
+<tr><td>CRAN</td><td>The Comprehensive R Archive Network, where you can download R and many R packages.</td></tr>
+<tr><td>default value</td><td>The value a function uses for an argument when you do not specify one.</td></tr>
+<tr><td>function</td><td>A named set of instructions that performs a task and can be used again.</td></tr>
+<tr><td>IDE</td><td>Integrated Development Environment: software that helps you write, run, and manage code. RStudio is an IDE for R.</td></tr>
+<tr><td>object</td><td>A name used to store a value, such as text, a number, or a date, so you can use it later.</td></tr>
+<tr><td>package</td><td>A collection of functions and other tools that adds capabilities to R.</td></tr>
+<tr><td>panes</td><td>The main areas of the RStudio window, used for tasks such as running code, viewing objects, and finding help.</td></tr>
+</tbody>
+</table>
+</div>
+</section><nav aria-label="Chapter navigation" class="chapter-bottom-navigation"><a class="chapter-nav-button previous" data-page-link="installing-r-rstudio" href="#installing-r-rstudio">← Chapter 3: Installing R and RStudio</a><a class="chapter-nav-button next" data-page-link="working-with-data" href="#working-with-data">Chapter 5: Organising Your Workspace →</a></nav></article>
+</div>
+</main>
+<footer style="
+  background-color: #202329;
+  color: #ffffff;
+  padding: 32px 24px;
+  margin-top: 0;
+">
+<div style="
+    max-width: 1180px;
+    margin: 0 auto;
+    font-size: 0.9rem;
+    line-height: 1.7;
+  ">
+<p style="margin: 0 0 8px 0; color: #ffffff;">
+<strong>
+        Developed for HL10524 Research and Study Skills for Sport, Health, and Exercise Scientists
+      </strong><br/>
+      Department for Health · University of Bath
+    </p>
+<p style="margin: 0; color: #ffffff;">
+      © 2026 Noah Marshall and Oly Perkin · Licensed under
+      <a href="https://creativecommons.org/licenses/by/4.0/" rel="noopener noreferrer" style="color: #ffffff; text-decoration: underline;" target="_blank">
+        CC BY 4.0
+      </a> · <a data-page-link="how-to-use" data-target-section="intro-citing" href="#intro-citing" style="color: #ffffff; text-decoration: underline;">How to Cite</a>
+</p>
+</div>
+</footer>
+</section>
+<section class="app-page" data-page="working-with-data" id="page-working-with-data">
+<section class="page-heading-section">
+<div class="page-heading-inner">
+<h1 class="page-heading">Organising Your Workspace</h1>
+<p class="page-subheading">Preparing your <em>RStudio</em> workspace for data analysis.</p>
+</div>
+</section>
+<main class="narrative-section">
+<div class="narrative-inner">
+<aside class="sidebar">
+<a class="course-home-button" data-page-link="home" href="#home">
+<span aria-hidden="true">←</span>
+          Home
+        </a>
+<nav aria-label="Contents" class="in-page-nav">
+<div class="in-page-nav-title"><h2>Contents</h2></div>
+<div class="in-page-nav-links-container">
+<ul>
+<li><a href="#working-with-data-availability">Availability</a></li>
+</ul>
+</div>
+</nav>
+</aside>
+<article class="content">
+<section class="content-section" id="working-with-data-availability">
+<p><strong>Not yet available.</strong></p>
+</section>
+<nav aria-label="Chapter navigation" class="chapter-bottom-navigation"><a class="chapter-nav-button previous" data-page-link="introduction-to-r" href="#introduction-to-r">← Chapter 4: Introduction to RStudio</a><a class="chapter-nav-button next" data-page-link="descriptive-statistics" href="#descriptive-statistics">Chapter 6: Data Visualisation →</a></nav></article>
+</div>
+</main>
+<footer style="
+  background-color: #202329;
+  color: #ffffff;
+  padding: 32px 24px;
+  margin-top: 0;
+">
+<div style="
+    max-width: 1180px;
+    margin: 0 auto;
+    font-size: 0.9rem;
+    line-height: 1.7;
+  ">
+<p style="margin: 0 0 8px 0; color: #ffffff;">
+<strong>
+        Developed for HL10524 Research and Study Skills for Sport, Health, and Exercise Scientists
+      </strong><br/>
+      Department for Health · University of Bath
+    </p>
+<p style="margin: 0; color: #ffffff;">
+      © 2026 Noah Marshall and Oly Perkin · Licensed under
+      <a href="https://creativecommons.org/licenses/by/4.0/" rel="noopener noreferrer" style="color: #ffffff; text-decoration: underline;" target="_blank">
+        CC BY 4.0
+      </a> · <a data-page-link="how-to-use" data-target-section="intro-citing" href="#intro-citing" style="color: #ffffff; text-decoration: underline;">How to Cite</a>
+</p>
+</div>
+</footer>
+</section>
+<section class="app-page" data-page="importing-data" id="page-importing-data">
+<section class="page-heading-section"><div class="page-heading-inner"><h1 class="page-heading">Importing Data</h1><p class="page-subheading">Importing and inspecting datasets in <em>RStudio</em>.</p></div></section>
+<main class="narrative-section"><div class="narrative-inner"><aside class="sidebar"><a class="course-home-button" data-page-link="home" href="#home"><span aria-hidden="true">←</span> Home</a></aside><article class="content"><p><strong>Not yet available.</strong></p><nav aria-label="Chapter navigation" class="chapter-bottom-navigation"><a class="chapter-nav-button previous" data-page-link="working-with-data" href="#working-with-data">← Chapter 5: Organising Your Workspace</a><a class="chapter-nav-button next" data-page-link="descriptive-statistics" href="#descriptive-statistics">Chapter 7: Visualising Data →</a></nav></article></div></main><footer style="
+  background-color: #202329;
+  color: #ffffff;
+  padding: 32px 24px;
+  margin-top: 0;
+">
+<div style="
+    max-width: 1180px;
+    margin: 0 auto;
+    font-size: 0.9rem;
+    line-height: 1.7;
+  ">
+<p style="margin: 0 0 8px 0; color: #ffffff;">
+<strong>
+        Developed for HL10524 Research and Study Skills for Sport, Health, and Exercise Scientists
+      </strong><br/>
+      Department for Health · University of Bath
+    </p>
+<p style="margin: 0; color: #ffffff;">
+      © 2026 Noah Marshall and Oly Perkin · Licensed under
+      <a href="https://creativecommons.org/licenses/by/4.0/" rel="noopener noreferrer" style="color: #ffffff; text-decoration: underline;" target="_blank">
+        CC BY 4.0
+      </a> · <a data-page-link="how-to-use" data-target-section="intro-citing" href="#intro-citing" style="color: #ffffff; text-decoration: underline;">How to Cite</a>
+</p>
+</div>
+</footer>
+</section>
+<section class="app-page" data-page="descriptive-statistics" id="page-descriptive-statistics">
+<section class="page-heading-section">
+<div class="page-heading-inner">
+<h1 class="page-heading">Data Visualisation</h1>
+<p class="page-subheading">Exploring, summarising, and describing quantitative data in <em>RStudio</em>.</p>
+</div>
+</section>
+<main class="narrative-section">
+<div class="narrative-inner">
+<aside class="sidebar">
+<a class="course-home-button" data-page-link="home" href="#home">
+<span aria-hidden="true">←</span>
+          Home
+        </a>
+<nav aria-label="Contents" class="in-page-nav">
+<div class="in-page-nav-title"><h2>Contents</h2></div>
+<div class="in-page-nav-links-container">
+<ul>
+<li><a href="#descriptive-statistics-availability">Availability</a></li>
+</ul>
+</div>
+</nav>
+</aside>
+<article class="content">
+<section class="content-section" id="descriptive-statistics-availability">
+<p><strong>Not yet available.</strong></p>
+</section>
+<nav aria-label="Chapter navigation" class="chapter-bottom-navigation"><a class="chapter-nav-button previous" data-page-link="working-with-data" href="#working-with-data">← Chapter 5: Organising Your Workspace</a><a class="chapter-nav-button next" data-page-link="data-visualisation" href="#data-visualisation">Chapter 7: Data Summaries →</a></nav></article>
+</div>
+</main>
+<footer style="
+  background-color: #202329;
+  color: #ffffff;
+  padding: 32px 24px;
+  margin-top: 0;
+">
+<div style="
+    max-width: 1180px;
+    margin: 0 auto;
+    font-size: 0.9rem;
+    line-height: 1.7;
+  ">
+<p style="margin: 0 0 8px 0; color: #ffffff;">
+<strong>
+        Developed for HL10524 Research and Study Skills for Sport, Health, and Exercise Scientists
+      </strong><br/>
+      Department for Health · University of Bath
+    </p>
+<p style="margin: 0; color: #ffffff;">
+      © 2026 Noah Marshall and Oly Perkin · Licensed under
+      <a href="https://creativecommons.org/licenses/by/4.0/" rel="noopener noreferrer" style="color: #ffffff; text-decoration: underline;" target="_blank">
+        CC BY 4.0
+      </a> · <a data-page-link="how-to-use" data-target-section="intro-citing" href="#intro-citing" style="color: #ffffff; text-decoration: underline;">How to Cite</a>
+</p>
+</div>
+</footer>
+</section>
+<section class="app-page" data-page="data-visualisation" id="page-data-visualisation">
+<section class="page-heading-section">
+<div class="page-heading-inner">
+<h1 class="page-heading">Data Summaries</h1>
+<p class="page-subheading">Creating and interpreting figures using R.</p>
+</div>
+</section>
+<main class="narrative-section">
+<div class="narrative-inner">
+<aside class="sidebar">
+<a class="course-home-button" data-page-link="home" href="#home">
+<span aria-hidden="true">←</span>
+          Home
+        </a>
+<nav aria-label="Contents" class="in-page-nav">
+<div class="in-page-nav-title"><h2>Contents</h2></div>
+<div class="in-page-nav-links-container">
+<ul>
+<li><a href="#data-visualisation-availability">Availability</a></li>
+</ul>
+</div>
+</nav>
+</aside>
+<article class="content">
+<section class="content-section" id="data-visualisation-availability">
+<p><strong>Not yet available.</strong></p>
+</section>
+<nav aria-label="Chapter navigation" class="chapter-bottom-navigation"><a class="chapter-nav-button previous" data-page-link="descriptive-statistics" href="#descriptive-statistics">← Chapter 6: Data Visualisation</a><a class="chapter-nav-button next" data-page-link="statistical-inference" href="#statistical-inference">Chapter 8: Data Relations →</a></nav></article>
+</div>
+</main>
+<footer style="
+  background-color: #202329;
+  color: #ffffff;
+  padding: 32px 24px;
+  margin-top: 0;
+">
+<div style="
+    max-width: 1180px;
+    margin: 0 auto;
+    font-size: 0.9rem;
+    line-height: 1.7;
+  ">
+<p style="margin: 0 0 8px 0; color: #ffffff;">
+<strong>
+        Developed for HL10524 Research and Study Skills for Sport, Health, and Exercise Scientists
+      </strong><br/>
+      Department for Health · University of Bath
+    </p>
+<p style="margin: 0; color: #ffffff;">
+      © 2026 Noah Marshall and Oly Perkin · Licensed under
+      <a href="https://creativecommons.org/licenses/by/4.0/" rel="noopener noreferrer" style="color: #ffffff; text-decoration: underline;" target="_blank">
+        CC BY 4.0
+      </a> · <a data-page-link="how-to-use" data-target-section="intro-citing" href="#intro-citing" style="color: #ffffff; text-decoration: underline;">How to Cite</a>
+</p>
+</div>
+</footer>
+</section>
+<section class="app-page" data-page="statistical-inference" id="page-statistical-inference">
+<section class="page-heading-section">
+<div class="page-heading-inner">
+<h1 class="page-heading">Data Relations</h1>
+<p class="page-subheading">Understanding uncertainty and statistical inference.</p>
+</div>
+</section>
+<main class="narrative-section">
+<div class="narrative-inner">
+<aside class="sidebar">
+<a class="course-home-button" data-page-link="home" href="#home">
+<span aria-hidden="true">←</span>
+          Home
+        </a>
+<nav aria-label="Contents" class="in-page-nav">
+<div class="in-page-nav-title"><h2>Contents</h2></div>
+<div class="in-page-nav-links-container">
+<ul>
+<li><a href="#statistical-inference-availability">Availability</a></li>
+</ul>
+</div>
+</nav>
+</aside>
+<article class="content">
+<section class="content-section" id="statistical-inference-availability">
+<p><strong>Not yet available.</strong></p>
+</section>
+<nav aria-label="Chapter navigation" class="chapter-bottom-navigation"><a class="chapter-nav-button previous" data-page-link="data-visualisation" href="#data-visualisation">← Chapter 7: Data Summaries</a><a class="chapter-nav-button next" data-page-link="comparing-groups" href="#comparing-groups">Chapter 9: Comparing groups →</a></nav></article>
+</div>
+</main>
+<footer style="
+  background-color: #202329;
+  color: #ffffff;
+  padding: 32px 24px;
+  margin-top: 0;
+">
+<div style="
+    max-width: 1180px;
+    margin: 0 auto;
+    font-size: 0.9rem;
+    line-height: 1.7;
+  ">
+<p style="margin: 0 0 8px 0; color: #ffffff;">
+<strong>
+        Developed for HL10524 Research and Study Skills for Sport, Health, and Exercise Scientists
+      </strong><br/>
+      Department for Health · University of Bath
+    </p>
+<p style="margin: 0; color: #ffffff;">
+      © 2026 Noah Marshall and Oly Perkin · Licensed under
+      <a href="https://creativecommons.org/licenses/by/4.0/" rel="noopener noreferrer" style="color: #ffffff; text-decoration: underline;" target="_blank">
+        CC BY 4.0
+      </a> · <a data-page-link="how-to-use" data-target-section="intro-citing" href="#intro-citing" style="color: #ffffff; text-decoration: underline;">How to Cite</a>
+</p>
+</div>
+</footer>
+</section>
+<section class="app-page" data-page="comparing-groups" id="page-comparing-groups">
+<section class="page-heading-section">
+<div class="page-heading-inner">
+<h1 class="page-heading">Comparing groups</h1>
+<p class="page-subheading">Examining differences between groups using statistical methods.</p>
+</div>
+</section>
+<main class="narrative-section">
+<div class="narrative-inner">
+<aside class="sidebar">
+<nav aria-label="Textbook navigation" class="in-page-nav">
+<div class="in-page-nav-title"><h2>Textbook</h2></div>
+<ul>
+<li><a data-page-link="home" href="#home">Home</a></li>
+<li><a href="#comparing-groups">This topic</a></li>
+</ul>
+</nav>
+</aside>
+<article class="content">
+<section class="content-section">
+<h2>Comparing groups</h2>
+<div class="placeholder-panel">
+<h3>Topic page
+<p>
+              This page is ready for the teaching material, activities,
+              worked examples, and resources for this topic.
+            </p>
+</h3></div>
+</section>
+<nav aria-label="Chapter navigation" class="chapter-bottom-navigation"><a class="chapter-nav-button previous" data-page-link="statistical-inference" href="#statistical-inference">← Chapter 8: Data Relations</a><a class="chapter-nav-button next" data-page-link="relationships" href="#relationships">Chapter 10: Relationships between variables →</a></nav></article>
+</div>
+</main>
+<footer style="
+  background-color: #202329;
+  color: #ffffff;
+  padding: 32px 24px;
+  margin-top: 0;
+">
+<div style="
+    max-width: 1180px;
+    margin: 0 auto;
+    font-size: 0.9rem;
+    line-height: 1.7;
+  ">
+<p style="margin: 0 0 8px 0; color: #ffffff;">
+<strong>
+        Developed for HL10524 Research and Study Skills for Sport, Health, and Exercise Scientists
+      </strong><br/>
+      Department for Health · University of Bath
+    </p>
+<p style="margin: 0; color: #ffffff;">
+      © 2026 Noah Marshall and Oly Perkin · Licensed under
+      <a href="https://creativecommons.org/licenses/by/4.0/" rel="noopener noreferrer" style="color: #ffffff; text-decoration: underline;" target="_blank">
+        CC BY 4.0
+      </a> · <a data-page-link="how-to-use" data-target-section="intro-citing" href="#intro-citing" style="color: #ffffff; text-decoration: underline;">How to Cite</a>
+</p>
+</div>
+</footer>
+</section>
+<section class="app-page" data-page="relationships" id="page-relationships">
+<section class="page-heading-section">
+<div class="page-heading-inner">
+<h1 class="page-heading">Relationships between variables</h1>
+<p class="page-subheading">Exploring associations using correlation and regression.</p>
+</div>
+</section>
+<main class="narrative-section">
+<div class="narrative-inner">
+<aside class="sidebar">
+<nav aria-label="Textbook navigation" class="in-page-nav">
+<div class="in-page-nav-title"><h2>Textbook</h2></div>
+<ul>
+<li><a data-page-link="home" href="#home">Home</a></li>
+<li><a href="#relationships">This topic</a></li>
+</ul>
+</nav>
+</aside>
+<article class="content">
+<section class="content-section">
+<h2>Relationships between variables</h2>
+<div class="placeholder-panel">
+<h3>Topic page</h3>
+<p>
+              This page is ready for the teaching material, activities,
+              worked examples, and resources for this topic.
+            </p>
+</div>
+</section>
+<nav aria-label="Chapter navigation" class="chapter-bottom-navigation"><a class="chapter-nav-button previous" data-page-link="comparing-groups" href="#comparing-groups">← Chapter 9: Comparing groups</a></nav></article>
+</div>
+</main>
+<footer style="
+  background-color: #202329;
+  color: #ffffff;
+  padding: 32px 24px;
+  margin-top: 0;
+">
+<div style="
+    max-width: 1180px;
+    margin: 0 auto;
+    font-size: 0.9rem;
+    line-height: 1.7;
+  ">
+<p style="margin: 0 0 8px 0; color: #ffffff;">
+<strong>
+        Developed for HL10524 Research and Study Skills for Sport, Health, and Exercise Scientists
+      </strong><br/>
+      Department for Health · University of Bath
+    </p>
+<p style="margin: 0; color: #ffffff;">
+      © 2026 Noah Marshall and Oly Perkin · Licensed under
+      <a href="https://creativecommons.org/licenses/by/4.0/" rel="noopener noreferrer" style="color: #ffffff; text-decoration: underline;" target="_blank">
+        CC BY 4.0
+      </a> · <a data-page-link="how-to-use" data-target-section="intro-citing" href="#intro-citing" style="color: #ffffff; text-decoration: underline;">How to Cite</a>
+</p>
+</div>
+</footer>
+</section>
+
+<script>
+(function () {
+
+  const pages = document.querySelectorAll('.app-page');
+
+  const unavailablePages = new Set(["introduction-to-r", "working-with-data", "importing-data", "descriptive-statistics", "data-visualisation"]);
+
+  function showPage(pageName) {
+    if (unavailablePages.has(pageName)) {
+      pageName = "home";
+      history.replaceState({ page: "home" }, "", "#home");
+    }
+
+    const target = document.querySelector(
+      '.app-page[data-page="' + pageName + '"]'
+    );
+
+    if (!target) {
+      console.error('Workbook page not found:', pageName);
+      return;
+    }
+
+    /* Hide every workbook page */
+    pages.forEach(function(page) {
+      page.classList.remove('active');
+    });
+
+    /* Show the selected page */
+    target.classList.add('active');
+
+    /* Move back to the top */
+    window.scrollTo(0, 0);
+
+    /* Update browser title */
+    const heading = target.querySelector('h1');
+
+    if (heading) {
+      document.title = heading.textContent.trim() + ' | HL10524';
+    }
+  }
+
+
+  /* Navigate to a specific section on the Home page */
+  document.addEventListener('click', function(event) {
+    const link = event.target.closest('[data-home-section]');
+    if (!link) return;
+    event.preventDefault();
+    showPage('home');
+    history.pushState({ page: 'home' }, '', '#home');
+    const section = document.getElementById(link.getAttribute('data-home-section'));
+    if (section) section.scrollIntoView({ behavior: 'auto', block: 'start' });
+  });
+
+  /* Handle workbook navigation */
+  document.addEventListener('click', function(event) {
+
+    const link = event.target.closest('[data-page-link]');
+
+    if (!link) return;
+
+    event.preventDefault();
+
+    const pageName = link.getAttribute('data-page-link');
+
+    showPage(pageName);
+
+    const targetSection = link.getAttribute("data-target-section");
+    if (targetSection) {
+      const section = document.getElementById(targetSection);
+      if (section) section.scrollIntoView({ behavior: "auto", block: "start" });
+    }
+
+    history.pushState(
+      { page: pageName },
+      '',
+      '#' + (targetSection || pageName)
+    );
+
+  });
+
+
+  /* Browser back / forward buttons */
+  window.addEventListener('popstate', function() {
+
+    const pageName =
+      window.location.hash.substring(1) || 'home';
+
+    showPage(pageName === 'intro-citing' ? 'how-to-use' : pageName);
+    if (pageName === 'intro-citing') document.getElementById('intro-citing')?.scrollIntoView({ behavior: 'auto', block: 'start' });
+
+  });
+
+
+  /* Open the correct page when the workbook first loads */
+  const startingPage =
+    window.location.hash.substring(1) || 'home';
+
+  showPage(startingPage === "intro-citing" ? "how-to-use" : startingPage);
+  if (startingPage === "intro-citing") document.getElementById("intro-citing")?.scrollIntoView({ behavior: "auto", block: "start" });
+
+
+  /* Copy buttons for R code examples */
+  document.addEventListener('click', function(event) {
+    const button = event.target.closest('.copy-code-button');
+    if (!button) return;
+
+    const example = button.closest('.code-example');
+    const code = example ? example.querySelector('code') : null;
+    if (!code) return;
+
+    const codeLines = code.querySelectorAll('.code-line');
+    const codeText = codeLines.length
+      ? Array.from(codeLines).map(function(line) { return line.textContent; }).join('\n')
+      : code.textContent;
+
+    function showCopied() {
+      button.setAttribute('data-tooltip', 'Copied!');
+      button.setAttribute('aria-label', 'R code copied');
+      button.classList.add('copied');
+      window.setTimeout(function() {
+        button.setAttribute('data-tooltip', 'Copy');
+        button.setAttribute('aria-label', 'Copy R code');
+        button.classList.remove('copied');
+      }, 1800);
+    }
+
+    if (navigator.clipboard && window.isSecureContext) {
+      navigator.clipboard.writeText(codeText).then(showCopied).catch(function() {
+        fallbackCopy(codeText, showCopied);
+      });
+    } else {
+      fallbackCopy(codeText, showCopied);
+    }
+  });
+
+  function fallbackCopy(text, onSuccess) {
+    const textarea = document.createElement('textarea');
+    textarea.value = text;
+    textarea.setAttribute('readonly', '');
+    textarea.style.position = 'fixed';
+    textarea.style.opacity = '0';
+    document.body.appendChild(textarea);
+    textarea.select();
+    try {
+      document.execCommand('copy');
+      onSuccess();
+    } finally {
+      document.body.removeChild(textarea);
+    }
+  }
+
+})();
+</script>
+<script>
+document.addEventListener('change', function (event) {
+  if (!event.target.matches('.knowledge-question input[type="radio"]')) return;
+  const panel = event.target.closest('.knowledge-panel');
+  const card = event.target.closest('.knowledge-question');
+  const feedback = card.querySelector('.knowledge-feedback');
+  const correct = event.target.value === card.dataset.correct;
+  feedback.className = 'knowledge-feedback ' + (correct ? 'is-correct' : 'is-incorrect');
+  feedback.textContent = (correct ? 'Yes, correct! ' : 'Not quite. Try another answer. ') + (correct ? card.dataset.explanation : '');
+  const cards = [...panel.querySelectorAll('.knowledge-question')];
+  const answered = cards.filter(c => c.querySelector('input:checked'));
+  const score = cards.filter(c => c.querySelector('input:checked')?.value === c.dataset.correct).length;
+  panel.querySelector('.knowledge-results p').textContent = answered.length === cards.length ? `You have ${score} of ${cards.length} correct. You can change any answer to try again or reset the questions.` : '';
+  panel.querySelector('.knowledge-reset').hidden = answered.length !== cards.length;
+});
+document.querySelectorAll('.knowledge-reset').forEach(button => {
+  button.addEventListener('click', function () {
+    const panel = this.closest('.knowledge-panel');
+    panel.querySelectorAll('input[type="radio"]').forEach(input => { input.checked = false; });
+    panel.querySelectorAll('.knowledge-feedback').forEach(feedback => { feedback.textContent = ''; feedback.className = 'knowledge-feedback'; });
+    panel.querySelector('.knowledge-results p').textContent = '';
+    this.hidden = true;
+  });
+});
+</script></body>
+</html>
